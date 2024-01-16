@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://mpkt245hqfmb"]
+
+[ext_resource type="Script" path="res://source/Actor/Player/CameraArm.gd" id="1_ayhv1"]
+[ext_resource type="Shader" path="res://source/Actor/Player/Outline.gdshader" id="2_4s6r6"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_4uwyf"]
+custom_solver_bias = 0.5
+margin = 0.2
+length = 3.5
+slide_on_slope = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7k4il"]
+render_priority = 0
+shader = ExtResource("2_4s6r6")
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+shader_parameter/shadow_thickness = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_djcko"]
+size = Vector2(6.5, 6.5)
+
+[node name="CameraArm" type="SpringArm3D"]
+shape = SubResource("SeparationRayShape3D_4uwyf")
+spring_length = 3.0
+margin = 0.2
+script = ExtResource("1_ayhv1")
+pitch = Vector2(-45, 20)
+PointOfView = "Third"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+v_offset = 2.0
+doppler_tracking = 2
+current = true
+fov = 90.0
+
+[node name="OutlineMesh" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+visible = false
+material_override = SubResource("ShaderMaterial_7k4il")
+mesh = SubResource("QuadMesh_djcko")

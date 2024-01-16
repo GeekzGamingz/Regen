@@ -1,0 +1,58 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1705388831
+icon.svg::CompressedTexture2D::5232775393544527798::1703857043::1703857463::1::::<><>::
+projectregenicon.png::CompressedTexture2D::3601707101540602540::1705326065::1705326274::1::::<><>::
+_Globals.gd::GDScript::-1::1705378749::0::1::::<>Node<>::
+_StateMachine.gd::GDScript::-1::1704706702::0::1::::StateMachine<>Node<>::
+::res://assets/::1705220130
+::res://assets/meshes/::1705375269
+::res://assets/meshes/Blocks/::1705318577
+mesh_library.tscn::PackedScene::5141364251091929549::1704697823::0::1::::<><>::
+worldblock.blend::PackedScene::9150310456212248369::1704354266::1704354342::1::::<><>::
+worldblockfullslant.blend::PackedScene::8540283881743002286::1704354025::1704354192::1::::<><>::
+worldblockhalfslant.blend::PackedScene::3809224984658321089::1704354471::1704354479::1::::<><>::
+worldblockquarterslant.blend::PackedScene::3839025692169379956::1704353996::1704354193::1::::<><>::
+worldblockthreequartslant.blend::PackedScene::2093658557551340809::1704354065::1704354193::1::::<><>::
+World_Blocks.tres::MeshLibrary::3880163868117110174::1705318577::0::1::::<><>::
+::res://assets/meshes/Chibi/::1704435034
+chibibody.blend::PackedScene::587934512571992218::1704372005::1704435034::1::::<><>::
+chibibodymaxshoulder.blend::PackedScene::3525025778633466115::1704349308::1704349734::1::::<><>::
+chibibodymedshoulder.blend::PackedScene::2420934466684893741::1704349485::1704349734::1::::<><>::
+chibibodyminshoulder.blend::PackedScene::4446029895180287357::1704349161::1704349735::1::::<><>::
+::res://assets/meshes/Entities/::1704452201
+::res://assets/meshes/Entities/Fish/::1704452226
+smolfeesh.blend::PackedScene::1330406820807546746::1704452112::1704452226::1::::<><>::
+::res://assets/meshes/Flora/::1704452212
+::res://assets/meshes/Flora/Flowers/::1704698245
+fleur1.blend::PackedScene::2822680632855103144::1704697996::1704698245::1::::<><>::
+::res://assets/meshes/Humanoid/::1705391723
+bodyattempt5.blend::PackedScene::1449012169092159103::1705391723::1705391733::1::::<><>::
+::res://assets/textures/::1705226480
+gwass.png::CompressedTexture2D::5421748282728727255::1705226243::1705226480::1::::<><>::
+rwocks.png::CompressedTexture2D::3885818436362426480::1705226320::1705226480::1::::<><>::
+samd.png::CompressedTexture2D::6724298151741629828::1705226472::1705226480::1::::<><>::
+::res://source/::1704438601
+::res://source/Actor/::1705381263
+_00Kinematics.gd::GDScript::-1::1705381263::0::1::::Kinematics<>CharacterBody3D<>::
+_01Actor.gd::GDScript::-1::1705375948::0::1::::Actor<>Kinematics<>::
+::res://source/Actor/Humanoid/::1705387247
+Humanoid.tscn::PackedScene::7851579131607886466::1705387247::0::1::::<><>::res://source/Actor/Humanoid/_02HumanoidMovement.gd<>uid://bh367lve7r5nr::::res://source/Actor/Player/ChibiMesh.tscn<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn
+_02HumanoidMovement.gd::GDScript::-1::1704350195::0::1::::<>Actor<>::
+::res://source/Actor/Player/::1705391691
+CameraArm.gd::GDScript::-1::1705382410::0::1::::<>SpringArm3D<>::
+ChibiMesh.tscn::PackedScene::2937485148876670603::1704697823::0::1::::<><>::uid://im2gwa4ovxxi::::res://assets/meshes/Chibi/chibibody.blend
+Outline.gdshader::Shader::-1::1705391691::0::1::::<><>::
+Player.tscn::PackedScene::6674857257884195189::1705391691::0::1::::<><>::res://source/Actor/Player/_02PlayerMovement.gd<>res://source/Actor/Player/PlayerFSM.gd<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn<>uid://uv6avv3m1aff::::res://assets/meshes/Humanoid/bodyattempt5.blend
+PlayerFSM.gd::GDScript::-1::1705391691::0::1::::<>StateMachine<>::
+_02PlayerMovement.gd::GDScript::-1::1705388839::0::1::::<>Actor<>::
+::res://source/User Interface/::1705382509
+camera_arm.tscn::PackedScene::873874354281976989::1705382509::0::1::::<><>::res://source/Actor/Player/CameraArm.gd<>res://source/Actor/Player/Outline.gdshader
+Mode_Debug.gd::GDScript::-1::1705212737::0::1::::<>Control<>::
+Mode_Debug.tscn::PackedScene::7396250599197636212::1705313223::0::1::::<><>::res://source/User Interface/Mode_Debug.gd
+Terminals.tscn::PackedScene::5915291581273011429::1704713038::0::1::::<><>::
+::res://source/world/::1705391691
+SeaLevel.gd::GDScript::-1::1705384375::0::1::::<>MeshInstance3D<>::
+Terrain.gd::GDScript::-1::1705327201::0::1::::<>StaticBody3D<>::
+Terrain.gdshader::Shader::-1::1705391691::0::1::::<><>::
+Terrain.tscn::PackedScene::2290466840091066184::1705389616::0::1::::<><>::res://source/world/Terrain.gd<>res://source/world/Terrain.gdshader<>uid://cjilnw2yjq256::::res://assets/textures/gwass.png<>uid://bvmk4km8amw2c::::res://assets/textures/rwocks.png<>uid://c22khcuhrj3cy::::res://assets/textures/samd.png
+_World.tscn::PackedScene::7251006396232961082::1705391691::0::1::::<><>::uid://7vrwiji6wsxs::::res://source/world/Terrain.tscn<>res://source/world/SeaLevel.gd<>uid://dj4mmjrlffg0a::::res://source/Actor/Humanoid/Humanoid.tscn<>uid://c2dl6n7fjyny8::::res://source/Actor/Player/Player.tscn<>uid://ddm2fw1pp3ebs::::res://source/User Interface/Mode_Debug.tscn

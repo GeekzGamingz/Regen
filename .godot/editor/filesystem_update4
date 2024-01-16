@@ -1,0 +1,9 @@
+res://source/world/_World.tscn
+res://source/world/Terrain.gdshader
+res://source/Actor/Player/Outline.gdshader
+res://source/world/SeaLevel.gd
+res://source/Actor/Player/Player.tscn
+res://source/Actor/Humanoid/Humanoid.tscn
+res://source/world/Terrain.tscn
+res://source/Actor/Player/_02PlayerMovement.gd
+res://source/Actor/Player/PlayerFSM.gd

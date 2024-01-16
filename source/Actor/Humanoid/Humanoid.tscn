@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dj4mmjrlffg0a"]
+
+[ext_resource type="Script" path="res://source/Actor/Humanoid/_02HumanoidMovement.gd" id="1_6yf8v"]
+[ext_resource type="PackedScene" uid="uid://bh367lve7r5nr" path="res://source/Actor/Player/ChibiMesh.tscn" id="2_r4eek"]
+[ext_resource type="PackedScene" uid="uid://mpkt245hqfmb" path="res://source/User Interface/camera_arm.tscn" id="3_glxko"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w5fiy"]
+radius = 0.25
+height = 1.5
+
+[node name="Humanoid" type="CharacterBody3D"]
+collision_layer = 2
+script = ExtResource("1_6yf8v")
+
+[node name="ActorMesh" parent="." instance=ExtResource("2_r4eek")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+shape = SubResource("CapsuleShape3D_w5fiy")
+
+[node name="WorldDetectors" type="Node3D" parent="."]
+
+[node name="GroundDetectors" type="Node3D" parent="WorldDetectors"]
+
+[node name="F_GroundDetector" type="RayCast3D" parent="WorldDetectors/GroundDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.150019, 0.5)
+target_position = Vector3(0, -0.25, 0)
+
+[node name="B_GroundDetector" type="RayCast3D" parent="WorldDetectors/GroundDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, -0.5)
+target_position = Vector3(0, -0.25, 0)
+
+[node name="C_GroundDetector" type="RayCast3D" parent="WorldDetectors/GroundDetectors"]
+target_position = Vector3(0, -0.25, 0)
+
+[node name="L_GroundDetector" type="RayCast3D" parent="WorldDetectors/GroundDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.15, 0)
+target_position = Vector3(0, -0.25, 0)
+
+[node name="R_GroundDetector" type="RayCast3D" parent="WorldDetectors/GroundDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.15, 0)
+target_position = Vector3(0, -0.25, 0)
+
+[node name="WallDetectors" type="Node3D" parent="WorldDetectors"]
+
+[node name="F_WallDetector" type="RayCast3D" parent="WorldDetectors/WallDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0.5)
+target_position = Vector3(0, 0, 0.25)
+
+[node name="B_WallDetector" type="RayCast3D" parent="WorldDetectors/WallDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -0.5)
+target_position = Vector3(0, 0, -0.25)
+
+[node name="L_WallDetector" type="RayCast3D" parent="WorldDetectors/WallDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.75, 0)
+target_position = Vector3(0.25, 0, 0)
+
+[node name="R_WallDetector" type="RayCast3D" parent="WorldDetectors/WallDetectors"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.75, 0)
+target_position = Vector3(-0.25, 0, 0)
+
+[node name="CameraArm" parent="." instance=ExtResource("3_glxko")]

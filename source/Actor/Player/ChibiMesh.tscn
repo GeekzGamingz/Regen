@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh367lve7r5nr"]
+
+[ext_resource type="PackedScene" uid="uid://im2gwa4ovxxi" path="res://assets/meshes/Chibi/chibibody.blend" id="1_ntfx4"]
+
+[node name="ChibiMesh" instance=ExtResource("1_ntfx4")]
+
+[node name="Armature_002" parent="." index="0"]
+transform = Transform3D(-1.31134e-08, 0, 0.3, 0, 0.3, 0, -0.3, 0, -1.31134e-08, 0.08, 0.5, 0)
+
+[node name="Skeleton3D" parent="Armature_002" index="0"]
+bones/1/rotation = Quaternion(0.707072, 0.707072, 0.00700278, -0.00700278)
+bones/2/position = Vector3(0.0235174, 0.0806392, -0.257051)
+bones/2/rotation = Quaternion(4.09062e-08, -1.97799e-07, 0.0362828, 0.999342)
+bones/3/rotation = Quaternion(0.991657, -0.107266, -0.0170665, 0.0694211)
+bones/3/scale = Vector3(1.00001, 0.999999, 1.00003)
+bones/4/rotation = Quaternion(0.110262, 0.000962896, -0.176706, 0.978068)
+bones/5/rotation = Quaternion(-0.0477747, 0.0502954, 0.66556, 0.743114)
+bones/5/scale = Vector3(0.999998, 1, 1.00001)
+bones/7/rotation = Quaternion(0.0178333, 0.706882, 0.0178333, 0.706882)
+bones/8/rotation = Quaternion(0.986638, 0.0185895, -0.000904692, 0.161864)
+bones/9/rotation = Quaternion(-0.138067, -0.00409776, 0.0150218, 0.990301)
+bones/10/rotation = Quaternion(-0.23051, 0.0150445, 0.0669084, 0.97065)
+bones/11/rotation = Quaternion(0.991645, -0.1078, 0.0170418, -0.0687727)
+bones/11/scale = Vector3(1.00001, 0.999999, 1.00003)
+bones/12/rotation = Quaternion(-0.109242, -0.00271161, -0.177344, 0.978063)
+bones/13/rotation = Quaternion(0.00809252, -0.00353703, 0.667455, 0.744597)
+bones/13/scale = Vector3(1, 1, 1.00001)
+bones/14/rotation = Quaternion(0.98625, 0.0232708, -0.0276789, -0.161257)
+bones/15/rotation = Quaternion(0.138444, 0.0327849, 0.0110157, 0.989766)
+bones/16/rotation = Quaternion(0.191534, -0.587752, -0.0564312, 0.784014)
+bones/18/rotation = Quaternion(0.504927, 0.504927, 0.495024, -0.495024)
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "idle"
