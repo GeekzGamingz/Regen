@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb16nfnx7sjex"]
+
+[ext_resource type="Shader" path="res://source/world/ProcGen/ClipMap/Clipmap.gdshader" id="1_kc7on"]
+[ext_resource type="Texture2D" uid="uid://cjilnw2yjq256" path="res://assets/textures/gwass.png" id="2_kihv8"]
+[ext_resource type="Texture2D" uid="uid://bvmk4km8amw2c" path="res://assets/textures/rwocks.png" id="3_gru4l"]
+[ext_resource type="Texture2D" uid="uid://c22khcuhrj3cy" path="res://assets/textures/samd.png" id="4_eilgl"]
+[ext_resource type="Script" path="res://source/world/ProcGen/ClipMap/clipmap_partition.gd" id="5_57e1w"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2c3y3"]
+render_priority = 0
+shader = ExtResource("1_kc7on")
+shader_parameter/min_rock_slope = 0.5
+shader_parameter/max_grass_slope = 0.9
+shader_parameter/min_rockgrass_height = -8.0
+shader_parameter/max_sand_height = -6.0
+shader_parameter/grass_texture = ExtResource("2_kihv8")
+shader_parameter/rock_texture = ExtResource("3_gru4l")
+shader_parameter/sand_texture = ExtResource("4_eilgl")
+
+[node name="Partition" type="MeshInstance3D"]
+material_override = SubResource("ShaderMaterial_2c3y3")
+extra_cull_margin = 512.0
+skeleton = NodePath("../../..")
+script = ExtResource("5_57e1w")
