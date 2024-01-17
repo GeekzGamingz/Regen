@@ -1,6 +1,6 @@
 extends Node3D
 
-var PARTITION = preload("res://source/world/ClipMap/ClipMapPartition.tscn")
+var PARTITION = preload("res://source/world/ProcGen/ClipMap/ClipMapPartition.tscn")
 @export var distance: int = 8
 
 var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value

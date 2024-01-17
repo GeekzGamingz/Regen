@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dbkpaspk2squs"]
 
-[ext_resource type="PackedScene" uid="uid://7vrwiji6wsxs" path="res://source/world/Terrain.tscn" id="1_kedyw"]
-[ext_resource type="Script" path="res://source/world/SeaLevel.gd" id="2_2slti"]
+[ext_resource type="PackedScene" uid="uid://b3x6ajm4gwyl6" path="res://source/World/ProcGen/ProcGen.tscn" id="1_yp283"]
+[ext_resource type="Script" path="res://source/World/SeaLevel.gd" id="2_2slti"]
 [ext_resource type="PackedScene" uid="uid://dj4mmjrlffg0a" path="res://source/Actor/Humanoid/Humanoid.tscn" id="3_5cedd"]
 [ext_resource type="PackedScene" uid="uid://c2dl6n7fjyny8" path="res://source/Actor/Player/Player.tscn" id="4_77dap"]
 [ext_resource type="PackedScene" uid="uid://ddm2fw1pp3ebs" path="res://source/User Interface/Mode_Debug.tscn" id="5_lojl0"]
@@ -38,11 +38,10 @@ shadow_enabled = true
 
 [node name="World_Chunk" type="Node3D" parent="."]
 
-[node name="Terrain" parent="World_Chunk" instance=ExtResource("1_kedyw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+[node name="Terrain" parent="World_Chunk" instance=ExtResource("1_yp283")]
 
 [node name="SeaLevel" type="MeshInstance3D" parent="World_Chunk"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, -8, 0)
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_dimni")
 mesh = SubResource("PlaneMesh_q6f75")
 skeleton = NodePath("")
