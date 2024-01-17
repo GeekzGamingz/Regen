@@ -1,9 +1,14 @@
-res://source/world/_World.tscn
-res://source/world/Terrain.gdshader
-res://source/Actor/Player/Outline.gdshader
-res://source/world/SeaLevel.gd
+res://source/World/_World.tscn
+res://source/World/ProcGen/ClipMap/Clipmap.gdshader
+res://source/User Interface/Outline.gdshader
+res://source/World/ProcGen/ProcGen.gdshader
 res://source/Actor/Player/Player.tscn
-res://source/Actor/Humanoid/Humanoid.tscn
-res://source/world/Terrain.tscn
+res://source/World/ProcGen/ClipMap/ClipMap.tscn
+res://source/World/ProcGen/CollisionMap/CollisionMap.tscn
+res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
+res://source/User Interface/camera_arm.tscn
 res://source/Actor/Player/_02PlayerMovement.gd
-res://source/Actor/Player/PlayerFSM.gd
+res://_Globals.gd
+res://source/World/ProcGen/ProcGen.tscn
+res://source/World/ProcGen/CollisionMap/CollisionMap.gd
+res://source/World/ProcGen/ClipMap/ClipmapPartition.gd

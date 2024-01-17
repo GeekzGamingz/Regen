@@ -1,6 +1,9 @@
+res://source/World/ProcGen
+res://source/World/ProcGen/ClipMap
+res://source/User Interface
+res://source/world/ProcGen/ClipMap
 res://source/world
 res://source/Actor/Player
-res://source/User Interface
 res://source/Actor/Humanoid
 res://
 res://assets/meshes/Blocks

@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://b76ulw06lp5tp"]
 
-[ext_resource type="Script" path="res://source/world/ProcGen/ClipMap/clipmap.gd" id="1_6hei5"]
+[ext_resource type="Script" path="res://source/World/ProcGen/ClipMap/clipmap.gd" id="1_6hei5"]
 
 [node name="Clipmap" type="Node3D"]
 script = ExtResource("1_6hei5")
+distance = 16

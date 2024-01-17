@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Project Regen"
-run/main_scene="res://source/world/_World.tscn"
+run/main_scene="res://source/World/_World.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -72,3 +72,30 @@ F3={
 
 3d_physics/layer_1="world"
 3d_physics/layer_2="player"
+
+[shader_globals]
+
+normalmap={
+"type": "sampler2D",
+"value": "res://source/World/ProcGen/normalmap.png"
+}
+amplitude={
+"type": "float",
+"value": 32.0
+}
+clipmap_partition_length={
+"type": "float",
+"value": 128.0
+}
+clipmap_position={
+"type": "vec3",
+"value": Vector3(0, 0, 0)
+}
+lod_step={
+"type": "float",
+"value": 2.0
+}
+heightmap={
+"type": "sampler2D",
+"value": "res://source/World/ProcGen/heightmap.png"
+}

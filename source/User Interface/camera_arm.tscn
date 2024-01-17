@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://mpkt245hqfmb"]
 
 [ext_resource type="Script" path="res://source/Actor/Player/CameraArm.gd" id="1_ayhv1"]
-[ext_resource type="Shader" path="res://source/Actor/Player/Outline.gdshader" id="2_4s6r6"]
+[ext_resource type="Shader" path="res://source/User Interface/Outline.gdshader" id="2_fges3"]
 
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_4uwyf"]
 custom_solver_bias = 0.5
@@ -11,7 +11,7 @@ slide_on_slope = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7k4il"]
 render_priority = 0
-shader = ExtResource("2_4s6r6")
+shader = ExtResource("2_fges3")
 shader_parameter/shadow_color = Color(0, 0, 0, 1)
 shader_parameter/shadow_thickness = 1.0
 
@@ -36,4 +36,5 @@ fov = 90.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
 visible = false
 material_override = SubResource("ShaderMaterial_7k4il")
+extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_djcko")
