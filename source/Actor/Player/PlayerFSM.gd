@@ -42,8 +42,9 @@ func transitions(_delta):
 @warning_ignore("unused_parameter")
 func state_enter(state_new, state_old):
 	match(state_new):
-		states.strafe_l: pass
-		states.strafe_r: pass
+		states.strafe_l: p.max_speed = p.strafe_speed
+		states.strafe_r: p.max_speed = p.strafe_speed
+		states.backstep: p.max_speed = p.strafe_speed
 	#Exit State
 @warning_ignore("unused_parameter")
 func state_exit(state_old, state_new):
@@ -63,11 +64,11 @@ func basic_move():
 			elif Input.get_action_strength("move_back") > 0: return states.walk_b
 			elif Input.get_action_strength("move_left") > 0: return states.walk_l
 			elif Input.get_action_strength("move_right") > 0: return states.walk_r
-		if p.max_speed == p.run_speed: #When Running
+		elif ((p.max_speed == p.run_speed) || #When Running
+			(p.max_speed == p.strafe_speed)): #When Strafing
 			if p.velocity.x || p.velocity.z != 0:
 				if Input.get_action_strength("move_forward") == 0:
 					if Input.get_action_strength("move_left") > 0: return states.strafe_l
 					elif Input.get_action_strength("move_right") > 0: return states.strafe_r
 					elif Input.get_action_strength("move_back") > 0: return states.backstep
 				else: return states.run
-				
