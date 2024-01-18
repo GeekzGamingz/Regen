@@ -81,11 +81,11 @@ normalmap={
 }
 amplitude={
 "type": "float",
-"value": 64.0
+"value": 32.0
 }
 clipmap_partition_length={
 "type": "float",
-"value": 64.0
+"value": 128.0
 }
 clipmap_position={
 "type": "vec3",

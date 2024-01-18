@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705539796
+::res://::1705551335
 icon.svg::CompressedTexture2D::5232775393544527798::1703857043::1705497847::1::::<><>::
 projectregenicon.png::CompressedTexture2D::3601707101540602540::1705395009::1705326274::1::::<><>::
 _Globals.gd::GDScript::-1::1705497759::0::1::::<>Node<>::
@@ -27,8 +27,9 @@ smolfeesh.blend::PackedScene::1330406820807546746::1704452112::1704452226::1::::
 fleur1.blend::PackedScene::2822680632855103144::1704697996::1704698245::1::::<><>::
 ::res://assets/meshes/Humanoid/::1705395036
 bodyattempt5.blend::PackedScene::1449012169092159103::1705391723::1705391733::1::::<><>::
-::res://assets/textures/::1705497847
+::res://assets/textures/::1705554257
 gwass.png::CompressedTexture2D::5421748282728727255::1705226243::1705497847::1::::<><>::
+gwassrevamp.png::CompressedTexture2D::2287844455593694260::1705554257::1705554291::1::::<><>::
 rwocks.png::CompressedTexture2D::3885818436362426480::1705226320::1705497847::1::::<><>::
 samd.png::CompressedTexture2D::6724298151741629828::1705226472::1705497847::1::::<><>::
 ::res://source/::1705395572
@@ -44,27 +45,26 @@ ChibiMesh.tscn::PackedScene::2937485148876670603::1704697823::0::1::::<><>::uid:
 Player.tscn::PackedScene::6674857257884195189::1705394485::0::1::::<><>::res://source/Actor/Player/_02PlayerMovement.gd<>res://source/Actor/Player/PlayerFSM.gd<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn<>uid://uv6avv3m1aff::::res://assets/meshes/Humanoid/bodyattempt5.blend
 PlayerFSM.gd::GDScript::-1::1705497759::0::1::::<>StateMachine<>::
 _02PlayerMovement.gd::GDScript::-1::1705388839::0::1::::<>Actor<>::
-::res://source/User Interface/::1705501476
+::res://source/User Interface/::1705554006
 camera_arm.tscn::PackedScene::873874354281976989::1705497759::0::1::::<><>::res://source/Actor/Player/CameraArm.gd<>res://source/User Interface/Outline.gdshader
 Mode_Debug.gd::GDScript::-1::1705212737::0::1::::<>Control<>::
-Mode_Debug.tscn::PackedScene::7396250599197636212::1705500965::0::1::::<><>::res://source/User Interface/Mode_Debug.gd
-Outline.gdshader::Shader::-1::1705501476::0::1::::<><>::
+Mode_Debug.tscn::PackedScene::7396250599197636212::1705554006::0::1::::<><>::res://source/User Interface/Mode_Debug.gd
+Outline.gdshader::Shader::-1::1705554006::0::1::::<><>::
 Terminals.tscn::PackedScene::5915291581273011429::1704713038::0::1::::<><>::
-::res://source/World/::1705501476
-Sea.gdshader::Shader::-1::1705501476::0::1::::<><>::
+::res://source/World/::1705554006
+Sea.gdshader::Shader::-1::1705554006::0::1::::<><>::
 SeaLevel.gd::GDScript::-1::1705497759::0::1::::<>MeshInstance3D<>::
-_World.tscn::PackedScene::7251006396232961082::1705500965::0::1::::<><>::uid://b3x6ajm4gwyl6::::res://source/World/ProcGen/ProcGen.tscn<>res://source/World/Sea.gdshader<>uid://dj4mmjrlffg0a::::res://source/Actor/Humanoid/Humanoid.tscn<>uid://c2dl6n7fjyny8::::res://source/Actor/Player/Player.tscn<>uid://ddm2fw1pp3ebs::::res://source/User Interface/Mode_Debug.tscn
-::res://source/World/ProcGen/::1705501476
+_World.tscn::PackedScene::7251006396232961082::1705554005::0::1::::<><>::uid://b3x6ajm4gwyl6::::res://source/World/ProcGen/ProcGen.tscn<>res://source/World/Sea.gdshader<>uid://dj4mmjrlffg0a::::res://source/Actor/Humanoid/Humanoid.tscn<>uid://c2dl6n7fjyny8::::res://source/Actor/Player/Player.tscn<>uid://ddm2fw1pp3ebs::::res://source/User Interface/Mode_Debug.tscn
+::res://source/World/ProcGen/::1705554006
 heightmap.png::CompressedTexture2D::8700171770965162582::1705497759::1705497759::1::::<><>::
 normalmap.png::CompressedTexture2D::3910464673556960503::1705497759::1705497759::1::::<><>::
-ProcGen.gdshader::Shader::-1::1705501476::0::1::::<><>::
-ProcGen.tscn::PackedScene::4401071713251485477::1705500965::0::1::::<><>::uid://cv8h7adxc8246::::res://source/World/ProcGen/CollisionMap/CollisionMap.tscn<>uid://b76ulw06lp5tp::::res://source/World/ProcGen/ClipMap/ClipMap.tscn
-::res://source/World/ProcGen/ClipMap/::1705501476
+ProcGen.tscn::PackedScene::4401071713251485477::1705554006::0::1::::<><>::uid://cv8h7adxc8246::::res://source/World/ProcGen/CollisionMap/CollisionMap.tscn<>uid://b76ulw06lp5tp::::res://source/World/ProcGen/ClipMap/ClipMap.tscn
+::res://source/World/ProcGen/ClipMap/::1705554006
 clipmap.gd::GDScript::-1::1705497759::0::1::::<>Node3D<>::
-Clipmap.gdshader::Shader::-1::1705501476::0::1::::<><>::
-ClipMap.tscn::PackedScene::4697694569631909845::1705500965::0::1::::<><>::res://source/World/ProcGen/ClipMap/clipmap.gd
+Clipmap.gdshader::Shader::-1::1705554006::0::1::::<><>::
+ClipMap.tscn::PackedScene::4697694569631909845::1705554006::0::1::::<><>::res://source/World/ProcGen/ClipMap/clipmap.gd
 ClipmapPartition.gd::GDScript::-1::1705497759::0::1::::<>MeshInstance3D<>::
-ClipMapPartition.tscn::PackedScene::2512189074820915315::1705501475::0::1::::<><>::res://source/World/ProcGen/ClipMap/Clipmap.gdshader<>res://source/World/ProcGen/ClipMap/ClipmapPartition.gd<>uid://cjilnw2yjq256::::res://assets/textures/gwass.png<>uid://bvmk4km8amw2c::::res://assets/textures/rwocks.png<>uid://c22khcuhrj3cy::::res://assets/textures/samd.png
-::res://source/World/ProcGen/CollisionMap/::1705500965
+ClipMapPartition.tscn::PackedScene::2512189074820915315::1705554006::0::1::::<><>::res://source/World/ProcGen/ClipMap/Clipmap.gdshader<>res://source/World/ProcGen/ClipMap/ClipmapPartition.gd<>uid://cjilnw2yjq256::::res://assets/textures/gwass.png<>uid://bvmk4km8amw2c::::res://assets/textures/rwocks.png<>uid://c22khcuhrj3cy::::res://assets/textures/samd.png<>res://source/World/Sea.gdshader
+::res://source/World/ProcGen/CollisionMap/::1705554006
 CollisionMap.gd::GDScript::-1::1705497759::0::1::::<>CollisionShape3D<>::
-CollisionMap.tscn::PackedScene::6315413719706606637::1705500965::0::1::::<><>::res://source/World/ProcGen/CollisionMap/CollisionMap.gd
+CollisionMap.tscn::PackedScene::6315413719706606637::1705554006::0::1::::<><>::res://source/World/ProcGen/CollisionMap/CollisionMap.gd
