@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvmk4km8amw2c"
-path.s3tc="res://.godot/imported/rwocks.png-ee1181c90dbb5163f607e1a844531b22.s3tc.ctex"
+path.s3tc="res://.godot/imported/rwocks.png-2974b5f6fd65db773c646c6c9303e8d0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Textures/rwocks.png"
-dest_files=["res://.godot/imported/rwocks.png-ee1181c90dbb5163f607e1a844531b22.s3tc.ctex"]
+source_file="res://assets/textures/rwocks.png"
+dest_files=["res://.godot/imported/rwocks.png-2974b5f6fd65db773c646c6c9303e8d0.s3tc.ctex"]
 
 [params]
 

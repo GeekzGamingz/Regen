@@ -17,7 +17,6 @@ uniform float max_grass_slope: hint_range(0.0, 1.0, 0.01) = 0.9;
 uniform float min_rockgrass_height: hint_range(-10.0, 1.0, 0.01) = -8.0;
 uniform float max_sand_height: hint_range(-10.0, 1.0, 0.01) = -6.0;
 // Varying Floats
-varying float normal_y;
 varying float vertex_y;
 varying vec2 normalmap_position;
 varying vec3 vert_norms;
@@ -52,7 +51,7 @@ vec3 to_normalmap(vec3 n){
 }
 
 void vertex() {
-	// Called for every vertex the material is visible on.	
+	// Called for every vertex the material is visible on.
 	vec3 world_vertex = VERTEX + MODEL_MATRIX[3].xyz;
 	normalmap_position = (world_vertex.xz + 0.5) / float(textureSize(heightmap, 0).x);
 	VERTEX.y = get_height(world_vertex);
@@ -78,7 +77,6 @@ void vertex() {
 		ceil(fraction.z)
 	);
 	
-	normal_y = NORMAL.y;
 	vertex_y = VERTEX.y;
 	vert_norms = world_vertex;
 }
@@ -96,8 +94,8 @@ void fragment() {
 	vec3 rock_albedo = texture(rock_texture, UV * 4.0).xyz;
 	vec3 sand_albedo = texture(sand_texture, UV * 4.0).xyz;
 	// Weights
-	float rock_grass_weight = normal_y;
-	float sand_rockgrass_weight = vertex_y;
+	float rock_grass_weight = normal.y;
+	float sand_rockgrass_weight = VERTEX.y;
 	// Calculating Rock/Grass Weight
 	rock_grass_weight = max(min_rock_slope, rock_grass_weight);
 	rock_grass_weight = min(max_grass_slope, rock_grass_weight);

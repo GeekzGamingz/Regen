@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjilnw2yjq256"
-path.s3tc="res://.godot/imported/gwass.png-0e73a42f37b6c448d48ab10d883a5c8b.s3tc.ctex"
+path.s3tc="res://.godot/imported/gwass.png-4d4f8ac90824bce4150e027fc01a851f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/Textures/gwass.png"
-dest_files=["res://.godot/imported/gwass.png-0e73a42f37b6c448d48ab10d883a5c8b.s3tc.ctex"]
+source_file="res://assets/textures/gwass.png"
+dest_files=["res://.godot/imported/gwass.png-4d4f8ac90824bce4150e027fc01a851f.s3tc.ctex"]
 
 [params]
 
