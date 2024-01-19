@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d3mqjnpeymi06"
-path="res://.godot/imported/worldblock.blend-e24825d15972624a6d2492ffefc7ee8b.scn"
+path="res://.godot/imported/worldblock.blend-1da3b84a812ed1e0fd5afd2f1cdd18ca.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Blocks/worldblock.blend"
-dest_files=["res://.godot/imported/worldblock.blend-e24825d15972624a6d2492ffefc7ee8b.scn"]
+source_file="res://assets/Meshes/Blocks/worldblock.blend"
+dest_files=["res://.godot/imported/worldblock.blend-1da3b84a812ed1e0fd5afd2f1cdd18ca.scn"]
 
 [params]
 

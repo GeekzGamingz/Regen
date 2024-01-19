@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://43girv3mu1wv"
-path="res://.godot/imported/worldblockthreequartslant.blend-0334448c37944e214e269f26b916b921.scn"
+path="res://.godot/imported/worldblockthreequartslant.blend-138fd50b2858e57bce24aff2be59a761.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Blocks/worldblockthreequartslant.blend"
-dest_files=["res://.godot/imported/worldblockthreequartslant.blend-0334448c37944e214e269f26b916b921.scn"]
+source_file="res://assets/Meshes/Blocks/worldblockthreequartslant.blend"
+dest_files=["res://.godot/imported/worldblockthreequartslant.blend-138fd50b2858e57bce24aff2be59a761.scn"]
 
 [params]
 

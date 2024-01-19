@@ -19,6 +19,7 @@ func _ready():
 	state_add("jump")
 	state_add("fall")
 	state_add("swim")
+	state_add("fly")
 	call_deferred("state_set", states.idle)
 #------------------------------------------------------------------------------#
 func _process(_delta: float):
@@ -52,14 +53,18 @@ func state_enter(state_new, state_old):
 		states.strafe_l: p.max_speed = p.strafe_speed
 		states.strafe_r: p.max_speed = p.strafe_speed
 		states.backstep: p.max_speed = p.strafe_speed
-		states.swim: p.swimming = true
+		states.swim:
+			p.swimming = true
+			p.raise_gDetectors()
 	#Exit State
 @warning_ignore("unused_parameter")
 func state_exit(state_old, state_new):
 	match(state_old):
-		states.swim: p.swimming = false
+		states.swim:
+			p.swimming = false
+			p.lower_gDetectors()
 #------------------------------------------------------------------------------#
-#Verbose States
+#Verbose Transitions
 #Basic Movement
 func basic_move():
 	#Swim
@@ -86,4 +91,7 @@ func basic_move():
 					elif Input.get_action_strength("move_back") > 0: return states.backstep
 				else: return states.run
 #Swimming Movement
-func swim_move(): pass
+func swim_move():
+	if p.check_grounded: return basic_move() #Expand Logic
+#Fly Movement
+func fly_move(): pass

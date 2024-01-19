@@ -1,10 +1,10 @@
 [gd_scene load_steps=16 format=3 uid="uid://bb16nfnx7sjex"]
 
 [ext_resource type="Shader" path="res://source/World/ProcGen/ClipMap/Clipmap.gdshader" id="1_pquoh"]
-[ext_resource type="Texture2D" uid="uid://bh65v1dioyr3k" path="res://assets/textures/gwassrevampbig.png" id="2_2tjjx"]
+[ext_resource type="Texture2D" uid="uid://bh65v1dioyr3k" path="res://assets/Textures/gwassrevampbig.png" id="2_2tjjx"]
 [ext_resource type="Script" path="res://source/World/ProcGen/ClipMap/ClipmapPartition.gd" id="2_i8w3a"]
-[ext_resource type="Texture2D" uid="uid://bvmk4km8amw2c" path="res://assets/textures/rwocks.png" id="3_xrbsn"]
-[ext_resource type="Texture2D" uid="uid://c22khcuhrj3cy" path="res://assets/textures/samd.png" id="4_2ktp4"]
+[ext_resource type="Texture2D" uid="uid://bvmk4km8amw2c" path="res://assets/Textures/rwocks.png" id="3_xrbsn"]
+[ext_resource type="Texture2D" uid="uid://c22khcuhrj3cy" path="res://assets/Textures/samd.png" id="4_2ktp4"]
 [ext_resource type="Shader" path="res://source/World/Sea.gdshader" id="6_4d2w2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ixasp"]

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://s7puuq2juljm"
-path="res://.godot/imported/smolfeesh.blend-1705b5384b5865d73373bb56734d80b2.scn"
+path="res://.godot/imported/smolfeesh.blend-c24facf2df2b4ab8059c80ff84dc5e89.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Entities/Fish/smolfeesh.blend"
-dest_files=["res://.godot/imported/smolfeesh.blend-1705b5384b5865d73373bb56734d80b2.scn"]
+source_file="res://assets/Meshes/Entities/Fish/smolfeesh.blend"
+dest_files=["res://.godot/imported/smolfeesh.blend-c24facf2df2b4ab8059c80ff84dc5e89.scn"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bujhm5c0l3j4t"
-path="res://.godot/imported/worldblockhalfslant.blend-9eda68221b6c8edfb04d8ad7a42cc38e.scn"
+path="res://.godot/imported/worldblockhalfslant.blend-6b9d0ff658b5579025ba065c7c2040bf.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Blocks/worldblockhalfslant.blend"
-dest_files=["res://.godot/imported/worldblockhalfslant.blend-9eda68221b6c8edfb04d8ad7a42cc38e.scn"]
+source_file="res://assets/Meshes/Blocks/worldblockhalfslant.blend"
+dest_files=["res://.godot/imported/worldblockhalfslant.blend-6b9d0ff658b5579025ba065c7c2040bf.scn"]
 
 [params]
 

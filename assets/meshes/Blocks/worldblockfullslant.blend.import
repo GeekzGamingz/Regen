@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://dtw8h0kyiffhe"
-path="res://.godot/imported/worldblockfullslant.blend-05a0b4789ae53936c9523e1a1cea3202.scn"
+path="res://.godot/imported/worldblockfullslant.blend-a2e2bf1671e1fa7442a9a5187ca91904.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Blocks/worldblockfullslant.blend"
-dest_files=["res://.godot/imported/worldblockfullslant.blend-05a0b4789ae53936c9523e1a1cea3202.scn"]
+source_file="res://assets/Meshes/Blocks/worldblockfullslant.blend"
+dest_files=["res://.godot/imported/worldblockfullslant.blend-a2e2bf1671e1fa7442a9a5187ca91904.scn"]
 
 [params]
 

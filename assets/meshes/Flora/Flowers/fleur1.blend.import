@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bghlexdgloiku"
-path="res://.godot/imported/fleur1.blend-12c992473241c608f6dc19896982227c.scn"
+path="res://.godot/imported/fleur1.blend-2b98e35a50b173d58e4d9e71e9cb3266.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Flora/Flowers/fleur1.blend"
-dest_files=["res://.godot/imported/fleur1.blend-12c992473241c608f6dc19896982227c.scn"]
+source_file="res://assets/Meshes/Flora/Flowers/fleur1.blend"
+dest_files=["res://.godot/imported/fleur1.blend-2b98e35a50b173d58e4d9e71e9cb3266.scn"]
 
 [params]
 
