@@ -18,6 +18,7 @@ func _ready():
 	state_add("backstep")
 	state_add("jump")
 	state_add("fall")
+	state_add("swim")
 	call_deferred("state_set", states.idle)
 #------------------------------------------------------------------------------#
 func _process(_delta: float):
@@ -38,6 +39,7 @@ func transitions(_delta):
 			return basic_move()
 		states.fall: return basic_move()
 		states.jump: return basic_move()
+		states.swim: if !p.position.y < 4: return basic_move()
 #Enter State
 @warning_ignore("unused_parameter")
 func state_enter(state_new, state_old):
@@ -45,6 +47,7 @@ func state_enter(state_new, state_old):
 		states.strafe_l: p.max_speed = p.strafe_speed
 		states.strafe_r: p.max_speed = p.strafe_speed
 		states.backstep: p.max_speed = p.strafe_speed
+		states.swim: pass
 	#Exit State
 @warning_ignore("unused_parameter")
 func state_exit(state_old, state_new):
@@ -57,6 +60,7 @@ func basic_move():
 	if !p.check_grounded(): #When Airbourne
 		if p.velocity.y > 0: return states.jump
 		elif p.velocity.y < 0: return states.fall
+	if p.position.y < 4: return states.swim #When Below Sea Level
 	#Horizontal Movement
 	elif p.velocity.x != 0 || p.velocity.z != 0:
 		if p.max_speed == p.walk_speed: #When Walking

@@ -1,11 +1,6 @@
-res://source/World/ProcGen/ProcGen.tscn
-res://source/User Interface/Outline.gdshader
+res://source/World/_World.tscn
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
 res://source/World/Sea.gdshader
-res://source/World/_World.tscn
-res://source/World/ProcGen/ClipMap/ClipMap.tscn
-res://source/User Interface/Mode_Debug.tscn
-res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
+res://source/User Interface/Outline.gdshader
+res://source/Actor/Player/PlayerFSM.gd
 res://source/Actor/Player/Player.tscn
-res://source/World/ProcGen/CollisionMap/CollisionMap.tscn
-res://source/World/_World.gd
