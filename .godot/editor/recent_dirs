@@ -1,6 +1,7 @@
-res://source/World
-res://source/World/ProcGen
 res://source/World/ProcGen/ClipMap
+res://source/World/ProcGen/CollisionMap
+res://source/World/ProcGen
+res://source/World
 res://source/User Interface
 res://source/world/ProcGen/ClipMap
 res://source/world

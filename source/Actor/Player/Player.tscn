@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://source/Actor/Player/_02PlayerMovement.gd" id="1_toj2t"]
 [ext_resource type="Script" path="res://source/Actor/Player/PlayerFSM.gd" id="2_mwrjc"]
+[ext_resource type="PackedScene" uid="uid://uv6avv3m1aff" path="res://assets/Meshes/Humanoid/bodyattempt5.blend" id="3_o0mbi"]
 [ext_resource type="PackedScene" uid="uid://mpkt245hqfmb" path="res://source/User Interface/camera_arm.tscn" id="4_b3hed"]
-[ext_resource type="PackedScene" uid="uid://uv6avv3m1aff" path="res://assets/meshes/Humanoid/bodyattempt5.blend" id="4_gokij"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_w5fiy"]
 radius = 0.25
@@ -16,7 +16,7 @@ script = ExtResource("1_toj2t")
 [node name="PlayerFSM" type="Node3D" parent="."]
 script = ExtResource("2_mwrjc")
 
-[node name="ActorMesh" parent="." instance=ExtResource("4_gokij")]
+[node name="ActorMesh" parent="." instance=ExtResource("3_o0mbi")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -24,6 +24,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
 shape = SubResource("CapsuleShape3D_w5fiy")
 
 [node name="CameraArm" parent="." instance=ExtResource("4_b3hed")]
+margin = 1.0
 
 [node name="WorldDetectors" type="Node3D" parent="."]
 

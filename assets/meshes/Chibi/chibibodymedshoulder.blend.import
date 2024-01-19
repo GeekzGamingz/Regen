@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://baqyo4en38wk0"
-path="res://.godot/imported/chibibodymedshoulder.blend-82d6f79637b9529c0b37df34b7e3aeb5.scn"
+path="res://.godot/imported/chibibodymedshoulder.blend-ca57aa105f6ba86d66d0e5111b6e3046.scn"
 
 [deps]
 
-source_file="res://assets/meshes/Chibi/chibibodymedshoulder.blend"
-dest_files=["res://.godot/imported/chibibodymedshoulder.blend-82d6f79637b9529c0b37df34b7e3aeb5.scn"]
+source_file="res://assets/Meshes/Chibi/chibibodymedshoulder.blend"
+dest_files=["res://.godot/imported/chibibodymedshoulder.blend-ca57aa105f6ba86d66d0e5111b6e3046.scn"]
 
 [params]
 

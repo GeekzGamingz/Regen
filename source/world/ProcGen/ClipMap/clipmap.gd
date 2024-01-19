@@ -1,10 +1,13 @@
+#Inherits Node3D Code
 extends Node3D
 #------------------------------------------------------------------------------#
-var PARTITION = preload("res://source/world/ProcGen/ClipMap/ClipMapPartition.tscn")
+#Variables
+var PARTITION = preload("res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn")
+var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
+#Exported Variables
 @export var distance: int = 8
 #------------------------------------------------------------------------------#
-var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
-#------------------------------------------------------------------------------#
+#Ready
 func _ready():
 	for x in range(-distance, distance + 1):
 		for z in range (-distance, distance + 1):
@@ -15,7 +18,7 @@ func _ready():
 			#Add to Tree
 			add_child(partition)
 #------------------------------------------------------------------------------#
+#Physics Process
 func _physics_process(_delta):
 	global_position = G.PLAYER.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 	RenderingServer.global_shader_parameter_set("clipmap_position", global_position)
-	rotation.y = 0

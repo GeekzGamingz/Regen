@@ -1,7 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://dbkpaspk2squs"]
+[gd_scene load_steps=9 format=3 uid="uid://dbkpaspk2squs"]
 
+[ext_resource type="Script" path="res://source/World/_World.gd" id="1_jfcig"]
 [ext_resource type="PackedScene" uid="uid://b3x6ajm4gwyl6" path="res://source/World/ProcGen/ProcGen.tscn" id="1_yp283"]
-[ext_resource type="Shader" path="res://source/World/Sea.gdshader" id="2_prfg1"]
 [ext_resource type="PackedScene" uid="uid://dj4mmjrlffg0a" path="res://source/Actor/Humanoid/Humanoid.tscn" id="3_5cedd"]
 [ext_resource type="PackedScene" uid="uid://c2dl6n7fjyny8" path="res://source/Actor/Player/Player.tscn" id="4_77dap"]
 [ext_resource type="PackedScene" uid="uid://ddm2fw1pp3ebs" path="res://source/User Interface/Mode_Debug.tscn" id="5_lojl0"]
@@ -20,61 +20,8 @@ tonemap_mode = 2
 glow_enabled = true
 fog_light_color = Color(0.74902, 0.478431, 0.270588, 1)
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_q6f75"]
-size = Vector2(100, 100)
-subdivide_width = 200
-subdivide_depth = 200
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_kgk6w"]
-noise_type = 3
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bb1l5"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_kgk6w")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_hqdl7"]
-noise_type = 3
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kywme"]
-seamless = true
-as_normal_map = true
-noise = SubResource("FastNoiseLite_hqdl7")
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_7iwny"]
-noise_type = 3
-fractal_type = 2
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_d4hjp"]
-seamless = true
-noise = SubResource("FastNoiseLite_7iwny")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1dt6p"]
-render_priority = 0
-shader = ExtResource("2_prfg1")
-shader_parameter/albedo = Color(0, 0.3, 0.4, 1)
-shader_parameter/albedo2 = Color(0, 0.4, 0.7, 1)
-shader_parameter/metallic = 0.0
-shader_parameter/roughness = 0.02
-shader_parameter/wave_direction = Vector2(2, 0)
-shader_parameter/wave_direction2 = Vector2(0, 1)
-shader_parameter/time_scale = 0.025
-shader_parameter/noise_scale = 10.0
-shader_parameter/height_scale = 0.15
-shader_parameter/color_deep = Color(0.1, 0.2, 0.3, 1)
-shader_parameter/color_shallow = Color(0, 0.5, 0.6, 1)
-shader_parameter/beers_law = 2.0
-shader_parameter/depth_offset = -0.75
-shader_parameter/edge_scale = 0.1
-shader_parameter/near = 1.0
-shader_parameter/far = 100.0
-shader_parameter/edge_color = Color(1, 1, 1, 1)
-shader_parameter/wave = SubResource("NoiseTexture2D_d4hjp")
-shader_parameter/texture_normal = SubResource("NoiseTexture2D_bb1l5")
-shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_kywme")
-
 [node name="WorldRoot" type="Node3D"]
+script = ExtResource("1_jfcig")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_viht0")
@@ -85,12 +32,7 @@ shadow_enabled = true
 
 [node name="World_Chunk" type="Node3D" parent="."]
 
-[node name="Terrain" parent="World_Chunk" instance=ExtResource("1_yp283")]
-
-[node name="SeaLevel" type="MeshInstance3D" parent="World_Chunk"]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 5, 0)
-mesh = SubResource("PlaneMesh_q6f75")
-surface_material_override/0 = SubResource("ShaderMaterial_1dt6p")
+[node name="ProcGen" parent="World_Chunk" instance=ExtResource("1_yp283")]
 
 [node name="Kinematics" type="Node3D" parent="."]
 
@@ -98,7 +40,7 @@ surface_material_override/0 = SubResource("ShaderMaterial_1dt6p")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.805989, 0.790523, 197.015)
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 15, 5)
 
 [node name="UIRoot" type="CanvasLayer" parent="."]
 

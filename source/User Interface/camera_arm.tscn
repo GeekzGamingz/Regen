@@ -3,11 +3,9 @@
 [ext_resource type="Script" path="res://source/Actor/Player/CameraArm.gd" id="1_ayhv1"]
 [ext_resource type="Shader" path="res://source/User Interface/Outline.gdshader" id="2_fges3"]
 
-[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_4uwyf"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mirih"]
 custom_solver_bias = 0.5
 margin = 0.2
-length = 3.5
-slide_on_slope = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7k4il"]
 render_priority = 0
@@ -19,7 +17,7 @@ shader_parameter/shadow_thickness = 1.0
 size = Vector2(6.5, 6.5)
 
 [node name="CameraArm" type="SpringArm3D"]
-shape = SubResource("SeparationRayShape3D_4uwyf")
+shape = SubResource("ConcavePolygonShape3D_mirih")
 spring_length = 3.0
 margin = 0.2
 script = ExtResource("1_ayhv1")
@@ -30,11 +28,9 @@ PointOfView = "Third"
 v_offset = 2.0
 doppler_tracking = 2
 current = true
-fov = 90.0
 
 [node name="OutlineMesh" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
-visible = false
 material_override = SubResource("ShaderMaterial_7k4il")
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_djcko")
