@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3x6ajm4gwyl6"]
 
-[ext_resource type="PackedScene" uid="uid://cv8h7adxc8246" path="res://source/World/ProcGen/CollisionMap/CollisionMap.tscn" id="1_c4xka"]
-[ext_resource type="PackedScene" uid="uid://b76ulw06lp5tp" path="res://source/World/ProcGen/ClipMap/ClipMap.tscn" id="2_jk1q6"]
+[ext_resource type="PackedScene" uid="uid://cv8h7adxc8246" path="res://source/World/ProcGen/CollisionMap/CollisionMap.tscn" id="1_c0ur1"]
+[ext_resource type="PackedScene" uid="uid://b76ulw06lp5tp" path="res://source/World/ProcGen/ClipMap/ClipMap.tscn" id="2_v1arp"]
 
 [node name="ProcGen" type="StaticBody3D"]
 
-[node name="CollisionMap" parent="." instance=ExtResource("1_c4xka")]
+[node name="Clipmap" parent="." instance=ExtResource("2_v1arp")]
 
-[node name="ClipMap" parent="." instance=ExtResource("2_jk1q6")]
+[node name="CollisionMap" parent="." instance=ExtResource("1_c0ur1")]
