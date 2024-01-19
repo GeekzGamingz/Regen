@@ -2,6 +2,7 @@ res://source/World/_World.tscn
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
 res://source/World/Sea.gdshader
 res://source/User Interface/Outline.gdshader
-res://_Globals.gd
 res://source/Actor/Player/Player.tscn
 res://source/Actor/Player/PlayerFSM.gd
+res://source/Actor/Player/_02PlayerMovement.gd
+res://_Globals.gd

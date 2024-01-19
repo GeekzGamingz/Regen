@@ -27,7 +27,11 @@ func _process(_delta: float):
 #State Logistics
 @warning_ignore("unused_parameter")
 func state_logic(delta):
-	pass
+	if p.controllable:
+		p.apply_gravity(delta)
+		p.handle_movement()
+		if p.swimming:
+			p.position.y = G.sea_level
 #State Transitions
 func transitions(_delta):
 	match(state):
@@ -39,7 +43,8 @@ func transitions(_delta):
 			return basic_move()
 		states.fall: return basic_move()
 		states.jump: return basic_move()
-		states.swim: if !p.position.y < G.sea_level: return basic_move()
+		states.swim: if p.check_grounded():
+			if p.position.y >= G.sea_level: return swim_move()
 #Enter State
 @warning_ignore("unused_parameter")
 func state_enter(state_new, state_old):
@@ -47,12 +52,15 @@ func state_enter(state_new, state_old):
 		states.strafe_l: p.max_speed = p.strafe_speed
 		states.strafe_r: p.max_speed = p.strafe_speed
 		states.backstep: p.max_speed = p.strafe_speed
-		states.swim: pass
+		states.swim: p.swimming = true
 	#Exit State
 @warning_ignore("unused_parameter")
 func state_exit(state_old, state_new):
-	pass
+	match(state_old):
+		states.swim: p.swimming = false
 #------------------------------------------------------------------------------#
+#Verbose States
+#Basic Movement
 func basic_move():
 	#Swim
 	if p.position.y < G.sea_level: return states.swim #When Below Sea Level
@@ -77,3 +85,5 @@ func basic_move():
 					elif Input.get_action_strength("move_right") > 0: return states.strafe_r
 					elif Input.get_action_strength("move_back") > 0: return states.backstep
 				else: return states.run
+#Swimming Movement
+func swim_move(): pass

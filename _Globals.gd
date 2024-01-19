@@ -7,7 +7,7 @@ extends Node
 var image: Image = load(ProjectSettings.get_setting("shader_globals/heightmap").value).get_image()
 var image_size = image.get_width()
 var amplitude: float = ProjectSettings.get_setting("shader_globals/amplitude").value
-var sea_level: float = 4
+var sea_level: float = 4.25
 #OnReady Variables
 @onready var PLAYER = get_tree().get_root().get_node("WorldRoot/Kinematics/Player")
 @onready var UI = get_tree().get_root().get_node("WorldRoot/UIRoot")
