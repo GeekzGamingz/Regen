@@ -39,7 +39,7 @@ func transitions(_delta):
 			return basic_move()
 		states.fall: return basic_move()
 		states.jump: return basic_move()
-		states.swim: if !p.position.y < 4: return basic_move()
+		states.swim: if !p.position.y < G.sea_level: return basic_move()
 #Enter State
 @warning_ignore("unused_parameter")
 func state_enter(state_new, state_old):
@@ -54,13 +54,14 @@ func state_exit(state_old, state_new):
 	pass
 #------------------------------------------------------------------------------#
 func basic_move():
+	#Swim
+	if p.position.y < G.sea_level: return states.swim #When Below Sea Level
 	#Idle
 	if p.velocity.x == 0 && p.check_grounded(): return states.idle
 	#Verticle Movement
 	if !p.check_grounded(): #When Airbourne
 		if p.velocity.y > 0: return states.jump
 		elif p.velocity.y < 0: return states.fall
-	if p.position.y < 4: return states.swim #When Below Sea Level
 	#Horizontal Movement
 	elif p.velocity.x != 0 || p.velocity.z != 0:
 		if p.max_speed == p.walk_speed: #When Walking
