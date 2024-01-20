@@ -7,4 +7,4 @@ res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
 res://source/World/ProcGen/ClipMap/ClipMap.tscn
 res://source/User Interface/camera_arm.tscn
-res://source/Actor/Player/PlayerFSM.gd
+res://source/World/ProcGen/ProcGen.gd

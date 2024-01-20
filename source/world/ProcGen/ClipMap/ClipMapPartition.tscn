@@ -1,10 +1,10 @@
 [gd_scene load_steps=17 format=3 uid="uid://bb16nfnx7sjex"]
 
 [ext_resource type="Shader" path="res://source/World/ProcGen/ClipMap/Clipmap.gdshader" id="1_pquoh"]
-[ext_resource type="Texture2D" uid="uid://bh65v1dioyr3k" path="res://assets/Textures/gwassrevampbig.png" id="2_2tjjx"]
 [ext_resource type="Script" path="res://source/World/ProcGen/ClipMap/ClipmapPartition.gd" id="2_i8w3a"]
-[ext_resource type="Texture2D" uid="uid://bvmk4km8amw2c" path="res://assets/Textures/rwocks.png" id="3_xrbsn"]
-[ext_resource type="Texture2D" uid="uid://c22khcuhrj3cy" path="res://assets/Textures/samd.png" id="4_2ktp4"]
+[ext_resource type="Texture2D" uid="uid://bh65v1dioyr3k" path="res://assets/Textures/WorldTextures/Grass/gwassrevampbig.png" id="2_p5jig"]
+[ext_resource type="Texture2D" uid="uid://bvmk4km8amw2c" path="res://assets/Textures/WorldTextures/Rocks/rwocks.png" id="3_vbhqw"]
+[ext_resource type="Texture2D" uid="uid://c22khcuhrj3cy" path="res://assets/Textures/WorldTextures/Sand/samd.png" id="4_874wk"]
 [ext_resource type="Shader" path="res://source/World/Sea.gdshader" id="6_4d2w2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ixasp"]
@@ -14,9 +14,9 @@ shader_parameter/min_rock_slope = 0.5
 shader_parameter/max_grass_slope = 0.9
 shader_parameter/min_rockgrass_height = 4.0
 shader_parameter/max_sand_height = 6.0
-shader_parameter/grass_texture = ExtResource("2_2tjjx")
-shader_parameter/rock_texture = ExtResource("3_xrbsn")
-shader_parameter/sand_texture = ExtResource("4_2ktp4")
+shader_parameter/grass_texture = ExtResource("2_p5jig")
+shader_parameter/rock_texture = ExtResource("3_vbhqw")
+shader_parameter/sand_texture = ExtResource("4_874wk")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tbjvc"]
 size = Vector2(128, 128)
