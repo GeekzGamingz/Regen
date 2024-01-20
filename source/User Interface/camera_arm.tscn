@@ -27,7 +27,6 @@ PointOfView = "Third"
 [node name="Camera3D" type="Camera3D" parent="."]
 v_offset = 2.0
 doppler_tracking = 2
-current = true
 
 [node name="OutlineMesh" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
