@@ -7,9 +7,4 @@ res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
 res://source/World/ProcGen/ClipMap/ClipMap.tscn
 res://source/User Interface/camera_arm.tscn
-res://source/World/ProcGen/CollisionMap/CollisionMap.gd
-res://source/World/ProcGen/CollisionMap/CollisionMap.tscn
-res://source/Actor/Humanoid/Humanoid.tscn
-res://source/World/ProcGen/ProcGen.gd
-res://_Globals.gd
-res://source/Actor/Humanoid/_02HumanoidMovement.gd
+res://source/Actor/Player/PlayerFSM.gd

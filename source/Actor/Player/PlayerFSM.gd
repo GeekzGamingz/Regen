@@ -54,14 +54,14 @@ func state_enter(state_new, state_old):
 		states.strafe_r: p.max_speed = p.strafe_speed
 		states.backstep: p.max_speed = p.strafe_speed
 		states.swim:
-			p.swimming = true
+			p.swimming = !p.swimming
 			p.raise_gDetectors()
 	#Exit State
 @warning_ignore("unused_parameter")
 func state_exit(state_old, state_new):
 	match(state_old):
 		states.swim:
-			p.swimming = false
+			p.swimming = !p.swimming
 			p.lower_gDetectors()
 #------------------------------------------------------------------------------#
 #Verbose Transitions
@@ -92,6 +92,6 @@ func basic_move():
 				else: return states.run
 #Swimming Movement
 func swim_move():
-	if p.check_grounded: return basic_move() #Expand Logic
+	if p.check_grounded(): return basic_move() #Expand Logic
 #Fly Movement
 func fly_move(): pass

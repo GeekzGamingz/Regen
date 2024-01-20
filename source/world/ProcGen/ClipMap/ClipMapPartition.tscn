@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bb16nfnx7sjex"]
+[gd_scene load_steps=17 format=3 uid="uid://bb16nfnx7sjex"]
 
 [ext_resource type="Shader" path="res://source/World/ProcGen/ClipMap/Clipmap.gdshader" id="1_pquoh"]
 [ext_resource type="Texture2D" uid="uid://bh65v1dioyr3k" path="res://assets/Textures/gwassrevampbig.png" id="2_2tjjx"]
@@ -17,6 +17,9 @@ shader_parameter/max_sand_height = 6.0
 shader_parameter/grass_texture = ExtResource("2_2tjjx")
 shader_parameter/rock_texture = ExtResource("3_xrbsn")
 shader_parameter/sand_texture = ExtResource("4_2ktp4")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tbjvc"]
+size = Vector2(128, 128)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qh08y"]
 size = Vector2(32, 32)
@@ -75,6 +78,7 @@ shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_kywme")
 [node name="Partition" type="MeshInstance3D"]
 material_override = SubResource("ShaderMaterial_ixasp")
 extra_cull_margin = 512.0
+mesh = SubResource("PlaneMesh_tbjvc")
 script = ExtResource("2_i8w3a")
 
 [node name="SeaLevel" type="MeshInstance3D" parent="."]
