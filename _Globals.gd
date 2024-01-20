@@ -10,6 +10,7 @@ var amplitude: float = ProjectSettings.get_setting("shader_globals/amplitude").v
 var sea_level: float = 4.25
 #OnReady Variables
 @onready var PLAYER = get_tree().get_root().get_node("WorldRoot/Kinematics/Player")
+@onready var KINEMATICS = get_tree().get_root().get_node("WorldRoot/Kinematics")
 @onready var UI = get_tree().get_root().get_node("WorldRoot/UIRoot")
 #------------------------------------------------------------------------------#
 #Globals Functions
