@@ -86,7 +86,6 @@ void fragment() {
 	vec3 interpolated_vert = vert_norms;
 	interpolated_vert.y = get_height(vert_norms);
 	vec3 normal = get_normal(interpolated_vert, 1.0);
-	//NORMAL_MAP = texture(normalmap, normalmap_position).rgb;
 	NORMAL_MAP = to_normalmap(normal);
 
 	// Albedo Values

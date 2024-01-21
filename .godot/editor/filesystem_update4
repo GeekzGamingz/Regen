@@ -1,10 +1,6 @@
-res://source/World/_World.tscn
+res://source/Actor/Player/Player.tscn
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
 res://source/World/Sea.gdshader
 res://source/User Interface/Outline.gdshader
-res://source/Actor/Player/Player.tscn
-res://source/World/ProcGen/ProcGen.tscn
-res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
-res://source/World/ProcGen/ClipMap/ClipMap.tscn
-res://source/User Interface/camera_arm.tscn
-res://source/World/ProcGen/ProcGen.gd
+res://source/Actor/Player/CameraArm.gd
+res://source/Actor/Player/PlayerFSM.gd

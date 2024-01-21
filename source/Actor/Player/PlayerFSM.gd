@@ -24,6 +24,7 @@ func _ready():
 #------------------------------------------------------------------------------#
 func _process(_delta: float):
 	state_output.text = str(states.keys()[state])
+#------------------------------------------------------------------------------#
 #State Machine
 #State Logistics
 @warning_ignore("unused_parameter")

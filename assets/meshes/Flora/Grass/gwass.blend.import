@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c206h4v1guxbd"
-path="res://.godot/imported/gwass.blend-0abd8d491380aee146a238c6e985cd1d.scn"
+uid="uid://e0jufpn8fukf"
+path="res://.godot/imported/Gwass.blend-014bc86ed36a6ff7c2e61570c49d5afd.scn"
 
 [deps]
 
-source_file="res://assets/Meshes/Flora/Grass/gwass.blend"
-dest_files=["res://.godot/imported/gwass.blend-0abd8d491380aee146a238c6e985cd1d.scn"]
+source_file="res://assets/Meshes/Flora/Grass/Gwass.blend"
+dest_files=["res://.godot/imported/Gwass.blend-014bc86ed36a6ff7c2e61570c49d5afd.scn"]
 
 [params]
 
@@ -31,7 +31,7 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "meshes": {
-"gwass_Plane": {
+"Gwass_Cube_007": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -39,7 +39,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://assets/Meshes/Flora/Grass/Gwass.res"
+"save_to_file/path": "res://assets/Meshes/Flora/Grass/Grass.res"
 }
 }
 }
