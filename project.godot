@@ -80,10 +80,6 @@ ESC={
 
 [shader_globals]
 
-normalmap={
-"type": "sampler2D",
-"value": "res://source/World/ProcGen/normalmap.png"
-}
 amplitude={
 "type": "float",
 "value": 24.0
@@ -99,6 +95,10 @@ clipmap_position={
 lod_step={
 "type": "float",
 "value": 2.0
+}
+normalmap={
+"type": "sampler2D",
+"value": "res://source/World/ProcGen/normalmap.png"
 }
 heightmap={
 "type": "sampler2D",

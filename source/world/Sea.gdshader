@@ -68,7 +68,10 @@ void fragment() {
 	vec2 time2 = (TIME * wave_direction2) * time_scale; // Movement rate of second wave
 	
 	// Blend normal maps into one
-	vec3 normal_blend = mix(texture(texture_normal,world_pos.xz + time).rgb, texture(texture_normal2,world_pos.xz + time2).rgb, 0.5);
+	vec3 normal_blend = mix(
+		texture(texture_normal,world_pos.xz + time).rgb,
+		texture(texture_normal2,world_pos.xz + time2).rgb,
+		0.5);
 	
 	// Calculate Fresnel
 	float fresnel = fresnel(5.0, NORMAL, VIEW);

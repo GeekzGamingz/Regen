@@ -4,8 +4,8 @@ extends Node
 #Constants
 #------------------------------------------------------------------------------#
 #Variables
-var image: Image = load(ProjectSettings.get_setting("shader_globals/heightmap").value).get_image()
-var image_size = image.get_width()
+var hm_image: Image = load(ProjectSettings.get_setting("shader_globals/heightmap").value).get_image()
+var hmImage_size = hm_image.get_width()
 var amplitude: float = ProjectSettings.get_setting("shader_globals/amplitude").value
 var sea_level: float = 4.25
 #OnReady Variables
@@ -16,4 +16,4 @@ var sea_level: float = 4.25
 #Globals Functions
 func get_height(x, z):
 	@warning_ignore("narrowing_conversion")
-	return image.get_pixel(fposmod(x, image_size), fposmod(z, image_size)).r * amplitude
+	return hm_image.get_pixel(fposmod(x, hmImage_size), fposmod(z, hmImage_size)).r * amplitude

@@ -36,12 +36,13 @@ shadow_enabled = true
 
 [node name="World_Chunk" type="Node3D" parent="."]
 
-[node name="ProcGen" parent="World_Chunk" instance=ExtResource("1_yp283")]
+[node name="ProcGen" parent="World_Chunk" node_paths=PackedStringArray("player") instance=ExtResource("1_yp283")]
+player = NodePath("../../Kinematics/Player")
 
 [node name="Kinematics" type="Node3D" parent="."]
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 15, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 5.85125, 5)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0491, 47.2396, 17.3889)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.2606, 6.83116, 17.3889)

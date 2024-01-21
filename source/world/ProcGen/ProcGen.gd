@@ -4,6 +4,8 @@ extends StaticBody3D
 #Variables
 #Preloaded Variables
 var COLLISION = preload("res://source/World/ProcGen/CollisionMap/CollisionMap.tscn")
+#Exported Variables
+@export var player = CharacterBody3D
 #OnReady Variables
 @onready var kinematics = G.KINEMATICS
 #------------------------------------------------------------------------------#
