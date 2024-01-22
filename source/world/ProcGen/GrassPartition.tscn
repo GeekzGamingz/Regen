@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cr7kko3lbpe3g"]
-
-[ext_resource type="ArrayMesh" uid="uid://c5m1mgx7e352n" path="res://assets/Meshes/Flora/Grass/Grass.res" id="1_0j2aq"]
-
-[node name="Partition_Grass" type="MeshInstance3D"]
-cast_shadow = 0
-mesh = ExtResource("1_0j2aq")

@@ -1,12 +1,10 @@
-res://source/Actor/Player/Player.tscn
-res://source/World/ProcGen/ClipMap/Clipmap.gdshader
-res://source/World/Sea.gdshader
-res://Grass.gdshader
-res://assets/Meshes/Flora/Grass/Grass.res
-res://source/User Interface/Outline.gdshader
-res://FoliageShader.tres
 res://source/World/_World.tscn
+res://source/World/ProcGen/ClipMap/Clipmap.gdshader
+res://source/World/ProcGen/Water/Water.gdshader
+res://source/User Interface/Outline.gdshader
+res://assets/Meshes/Flora/Grass/Grass.gdshader
+res://assets/Meshes/Flora/Grass/Grass.res
+res://MMInstancer.gd
 res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
-res://source/World/ProcGen/GrassPartition.tscn
-res://source/User Interface/camera_arm.tscn
+res://source/World/ProcGen/ClipMap/ClipmapPartition.gd

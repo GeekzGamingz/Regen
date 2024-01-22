@@ -35,6 +35,7 @@ transform = Transform3D(-0.866024, -0.433016, 0.25, 0, 0.499998, 0.866026, -0.50
 shadow_enabled = true
 
 [node name="World_Chunk" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.1313, 0)
 
 [node name="ProcGen" parent="World_Chunk" node_paths=PackedStringArray("player") instance=ExtResource("1_yp283")]
 player = NodePath("../../Kinematics/Player")

@@ -4,7 +4,6 @@ extends Node3D
 #------------------------------------------------------------------------------#
 #Variables
 var PARTITION_CLIPMAP = preload("res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn")
-var PARTITION_GRASS = preload("res://source/World/ProcGen/GrassPartition.tscn")
 var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
 #Exported Variables
 @export var distance: int = 8
@@ -17,12 +16,12 @@ func _ready():
 func generate_world():
 	for x in range(-distance, distance + 1):
 		for z in range (-distance, distance + 1):
-			var partition = PARTITION_CLIPMAP.instantiate()
+			var partition_clipmap = PARTITION_CLIPMAP.instantiate()
 			#Assign Partition Coordinates
-			partition.x = x
-			partition.z = z
+			partition_clipmap.x = x
+			partition_clipmap.z = z
 			#Add to Tree
-			add_child(partition)
+			add_child(partition_clipmap)
 #------------------------------------------------------------------------------#
 #Physics Process
 func _physics_process(_delta):

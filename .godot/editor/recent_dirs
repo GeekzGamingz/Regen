@@ -1,6 +1,7 @@
+res://
+res://assets/Meshes/Flora/Grass
 res://source/World/ProcGen/ClipMap
 res://source/World/ProcGen
-res://assets/Meshes/Flora/Grass
 res://source/World/ProcGen/CollisionMap
 res://source/World
 res://source/User Interface
@@ -8,5 +9,4 @@ res://source/world/ProcGen/ClipMap
 res://source/world
 res://source/Actor/Player
 res://source/Actor/Humanoid
-res://
 res://assets/meshes/Blocks

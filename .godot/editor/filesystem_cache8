@@ -1,8 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705900290
-FoliageShader.tres::Shader::5664899586070139840::1705899635::0::1::::<><>::
-Grass.gdshader::Shader::-1::1705899635::0::1::::<><>::
+::res://::1705922883
 icon.svg::CompressedTexture2D::5232775393544527798::1705643407::1705643429::1::::<><>::
+MMGrid.gd::GDScript::-1::1705921932::0::1::::<>Node3D<>::
+MMInstancer.gd::GDScript::-1::1705922789::0::1::::<>Node3D<>::
 projectregenicon.png::CompressedTexture2D::3601707101540602540::1705643407::1705643407::1::::<><>::
 _Globals.gd::GDScript::-1::1705850526::0::1::::<>Node<>::
 _StateMachine.gd::GDScript::-1::1705643406::0::1::::StateMachine<>Node<>::
@@ -30,10 +30,11 @@ smolfeesh.blend::PackedScene::1330406820807546746::1705643407::1705659751::1::::
 ::res://assets/Meshes/Flora/::1705744842
 ::res://assets/Meshes/Flora/Flowers/::1705659751
 fleur1.blend::PackedScene::2822680632855103144::1705643407::1705659751::1::::<><>::
-::res://assets/Meshes/Flora/Grass/::1705897492
-Grass.res::ArrayMesh::6904879633045695227::1705897492::0::1::::<><>::res://Grass.gdshader
+::res://assets/Meshes/Flora/Grass/::1705922860
+Grass.gdshader::Shader::-1::1705922860::0::1::::<><>::
+Grass.res::ArrayMesh::6904879633045695227::1705922713::0::1::::<><>::res://assets/Meshes/Flora/Grass/Grass.gdshader
 Gwass.blend::PackedScene::332947273640416577::1705809023::1705809107::1::::<><>::
-::res://assets/Meshes/Humanoid/::1705839591
+::res://assets/Meshes/Humanoid/::1705900296
 bodyattempt5.blend::PackedScene::1449012169092159103::1705899848::1705900296::1::::<><>::
 ::res://assets/Textures/::1705758091
 ::res://assets/Textures/WorldTextures/::1705758091
@@ -52,34 +53,36 @@ _01Actor.gd::GDScript::-1::1705661724::0::1::::Actor<>Kinematics<>::
 ::res://source/Actor/Humanoid/::1705738142
 Humanoid.tscn::PackedScene::7851579131607886466::1705738142::0::1::::<><>::res://source/Actor/Humanoid/_02HumanoidMovement.gd<>uid://bh367lve7r5nr::::res://source/Actor/Player/ChibiMesh.tscn<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn
 _02HumanoidMovement.gd::GDScript::-1::1705737926::0::1::::<>Actor<>::
-::res://source/Actor/Player/::1705899244
+::res://source/Actor/Player/::1705900402
 CameraArm.gd::GDScript::-1::1705809868::0::1::::<>SpringArm3D<>::
 ChibiMesh.tscn::PackedScene::2937485148876670603::1705659741::0::1::::<><>::uid://im2gwa4ovxxi::::res://assets/Meshes/Chibi/chibibody.blend
-Player.tscn::PackedScene::6674857257884195189::1705899244::0::1::::<><>::res://source/Actor/Player/_02PlayerMovement.gd<>res://source/Actor/Player/PlayerFSM.gd<>uid://uv6avv3m1aff::::res://assets/Meshes/Humanoid/bodyattempt5.blend<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn
+Player.tscn::PackedScene::6674857257884195189::1705900402::0::1::::<><>::res://source/Actor/Player/_02PlayerMovement.gd<>res://source/Actor/Player/PlayerFSM.gd<>uid://uv6avv3m1aff::::res://assets/Meshes/Humanoid/bodyattempt5.blend<>uid://mpkt245hqfmb::::res://source/User Interface/camera_arm.tscn
 PlayerFSM.gd::GDScript::-1::1705809868::0::1::::<>StateMachine<>::
 _02PlayerMovement.gd::GDScript::-1::1705646598::0::1::::<>Actor<>::
-::res://source/User Interface/::1705899635
-camera_arm.tscn::PackedScene::873874354281976989::1705899627::0::1::::<><>::res://source/Actor/Player/CameraArm.gd<>res://source/User Interface/Outline.gdshader<>uid://cmyeclhrvhn2o::::res://FoliageShader.tres<>uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
+::res://source/User Interface/::1705922860
+camera_arm.tscn::PackedScene::873874354281976989::1705915975::0::1::::<><>::res://source/Actor/Player/CameraArm.gd<>res://source/User Interface/Outline.gdshader
 Mode_Debug.gd::GDScript::-1::1705643407::0::1::::<>Control<>::
 Mode_Debug.tscn::PackedScene::7396250599197636212::1705643433::0::1::::<><>::res://source/User Interface/Mode_Debug.gd
-Outline.gdshader::Shader::-1::1705899635::0::1::::<><>::
+Outline.gdshader::Shader::-1::1705922860::0::1::::<><>::
 Terminals.tscn::PackedScene::5915291581273011429::1705643407::0::1::::<><>::
-::res://source/World/::1705899635
-Sea.gdshader::Shader::-1::1705899635::0::1::::<><>::
+::res://source/World/::1705922860
 _World.gd::GDScript::-1::1705643407::0::1::::<>Node3D<>::
-_World.tscn::PackedScene::7251006396232961082::1705899244::0::1::::<><>::res://source/World/_World.gd<>uid://b3x6ajm4gwyl6::::res://source/World/ProcGen/ProcGen.tscn<>uid://dj4mmjrlffg0a::::res://source/Actor/Humanoid/Humanoid.tscn<>uid://c2dl6n7fjyny8::::res://source/Actor/Player/Player.tscn<>uid://ddm2fw1pp3ebs::::res://source/User Interface/Mode_Debug.tscn
-::res://source/World/ProcGen/::1705899244
-Grass.tscn::PackedScene::339386803098645480::1705847773::0::1::::<><>::uid://bh65v1dioyr3k::::res://assets/Textures/WorldTextures/Grass/gwassrevampbig.png<>uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
-GrassPartition.tscn::PackedScene::6032737604312525878::1705899244::0::1::::<><>::uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
+_World.tscn::PackedScene::7251006396232961082::1705922860::0::1::::<><>::res://source/World/_World.gd<>uid://b3x6ajm4gwyl6::::res://source/World/ProcGen/ProcGen.tscn<>uid://dj4mmjrlffg0a::::res://source/Actor/Humanoid/Humanoid.tscn<>uid://c2dl6n7fjyny8::::res://source/Actor/Player/Player.tscn<>res://MMInstancer.gd<>uid://dv7os7860pbi1::::res://source/World/ProcGen/heightmap.png<>uid://ddm2fw1pp3ebs::::res://source/User Interface/Mode_Debug.tscn<>uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
+::res://source/World/ProcGen/::1705922806
 heightmap.png::CompressedTexture2D::8700171770965162582::1705643407::1705643818::1::::<><>::
 normalmap.png::CompressedTexture2D::3910464673556960503::1705643407::1705643818::1::::<><>::
-ProcGen.gd::GDScript::-1::1705850843::0::1::::<>StaticBody3D<>::
-ProcGen.tscn::PackedScene::4401071713251485477::1705899244::0::1::::<><>::res://source/World/ProcGen/ProcGen.gd<>res://source/World/ProcGen/ClipMap/ClipmapScript.gd
-::res://source/World/ProcGen/ClipMap/::1705899635
-Clipmap.gdshader::Shader::-1::1705899635::0::1::::<><>::
+ProcGen.gd::GDScript::-1::1705917959::0::1::::<>StaticBody3D<>::
+ProcGen.tscn::PackedScene::4401071713251485477::1705922806::0::1::::<><>::res://source/World/ProcGen/ProcGen.gd<>res://source/World/ProcGen/ClipMap/ClipmapScript.gd
+::res://source/World/ProcGen/ClipMap/::1705922860
+Clipmap.gdshader::Shader::-1::1705922860::0::1::::<><>::
 ClipmapPartition.gd::GDScript::-1::1705850941::0::1::::<>MeshInstance3D<>::
-ClipMapPartition.tscn::PackedScene::2512189074820915315::1705899244::0::1::::<><>::res://source/World/ProcGen/ClipMap/Clipmap.gdshader<>res://source/World/ProcGen/ClipMap/ClipmapPartition.gd<>uid://bh65v1dioyr3k::::res://assets/Textures/WorldTextures/Grass/gwassrevampbig.png<>uid://bvmk4km8amw2c::::res://assets/Textures/WorldTextures/Rocks/rwocks.png<>uid://c22khcuhrj3cy::::res://assets/Textures/WorldTextures/Sand/samd.png<>res://source/World/Sea.gdshader
-ClipmapScript.gd::GDScript::-1::1705851278::0::1::::<>Node3D<>::
+ClipMapPartition.tscn::PackedScene::2512189074820915315::1705917984::0::1::::<><>::res://source/World/ProcGen/ClipMap/Clipmap.gdshader<>res://source/World/ProcGen/ClipMap/ClipmapPartition.gd<>uid://bh65v1dioyr3k::::res://assets/Textures/WorldTextures/Grass/gwassrevampbig.png<>uid://bvmk4km8amw2c::::res://assets/Textures/WorldTextures/Rocks/rwocks.png<>uid://c22khcuhrj3cy::::res://assets/Textures/WorldTextures/Sand/samd.png<>res://source/World/ProcGen/Water/Water.gdshader
+ClipmapScript.gd::GDScript::-1::1705918647::0::1::::<>Node3D<>::
 ::res://source/World/ProcGen/CollisionMap/::1705738766
 CollisionMap.gd::GDScript::-1::1705738766::0::1::::<>CollisionShape3D<>::
 CollisionMap.tscn::PackedScene::6315413719706606637::1705738766::0::1::::<><>::res://source/World/ProcGen/CollisionMap/CollisionMap.gd
+::res://source/World/ProcGen/Grass/::1705919000
+Grass.tscn::PackedScene::339386803098645480::1705919000::0::1::::<><>::uid://bh65v1dioyr3k::::res://assets/Textures/WorldTextures/Grass/gwassrevampbig.png<>uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
+GrassPartition.tscn::PackedScene::6032737604312525878::1705918301::0::1::::<><>::res://source/World/ProcGen/Grass/GrassPartition.gdshader<>uid://c5m1mgx7e352n::::res://assets/Meshes/Flora/Grass/Grass.res
+::res://source/World/ProcGen/Water/::1705922860
+Water.gdshader::Shader::-1::1705922860::0::1::::<><>::
