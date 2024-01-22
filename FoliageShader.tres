@@ -3,6 +3,10 @@
 [resource]
 code = "shader_type particles;
 
+global uniform sampler2D heightmap;
+global uniform sampler2D normalmap;
+global uniform float amplitude;
+
 uniform float instance_rows;
 uniform float instance_rot_randomize = 2.5;
 uniform float instance_spacing = 1.0;
@@ -19,19 +23,17 @@ uniform float _slope_coverage = 0.5;
 uniform float clumping_strength : hint_range(0.0, 100.0) = 20.0;
 uniform mat3 terrain_normal_basis;
 
-uniform sampler2D map_heightmap;
-uniform sampler2D map_normalmap;
 uniform bool instance_orient_to_normal = false;
 uniform float instance_orientation_influence : hint_range(0.0, 10.0) = 1.0;
 uniform float __terrain_amplitude;
-uniform vec2 map_heightmap_size = vec2(2000.0, 2000.0);
-uniform vec2 map_normalmap_size = vec2(2000.0, 2000.0);
+uniform vec2 map_heightmap_size = vec2(512.0, 512.0);
+uniform vec2 map_normalmap_size = vec2(512.0, 512.0);
 uniform sampler2D map_clumpmap;
 
 float get_height(vec2 pos) {
 	pos -= 0.5 * map_heightmap_size;
 	pos /= map_heightmap_size;	
-	return 2.0*__terrain_amplitude * texture(map_heightmap, pos).r;
+	return 2.0 * amplitude * texture(heightmap, pos).r;
 }
 
 vec3 unpack_normalmap(vec3 rgb) {
@@ -43,7 +45,7 @@ return n;
 vec3 get_normal(vec2 pos) {
 	pos -= 0.5 * map_normalmap_size;
 	pos /= map_normalmap_size;
-	return terrain_normal_basis * unpack_normalmap(texture(map_normalmap, pos).rgb);
+	return terrain_normal_basis * unpack_normalmap(texture(normalmap, pos).rgb);
 }
 
 float get_clumps(vec2 pos) {
@@ -52,7 +54,7 @@ float get_clumps(vec2 pos) {
 	return 100.0 * texture(map_clumpmap, pos).r;
 }
 
-void start() {	
+void start() {
 	// get position
 	vec3 pos = vec3(0.0, 0.0, 0.0);
 	pos.z = float(INDEX);
@@ -71,7 +73,7 @@ void start() {
 	pos.z += EMISSION_TRANSFORM[3][2] - mod(EMISSION_TRANSFORM[3][2], instance_spacing);
 	
 	// add noise 
-	vec3 noise = texture(map_heightmap, pos.xz * 0.1).rgb;
+	vec3 noise = texture(heightmap, pos.xz * 0.1).rgb;
 	pos.x += noise.z * instance_spacing * instance_pos_randomize;
 	pos.z -= noise.x * instance_spacing * instance_pos_randomize;
 

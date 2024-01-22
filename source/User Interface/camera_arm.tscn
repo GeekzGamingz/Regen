@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://mpkt245hqfmb"]
+[gd_scene load_steps=11 format=3 uid="uid://mpkt245hqfmb"]
 
 [ext_resource type="Script" path="res://source/Actor/Player/CameraArm.gd" id="1_ayhv1"]
 [ext_resource type="Shader" path="res://source/User Interface/Outline.gdshader" id="2_fges3"]
+[ext_resource type="Shader" uid="uid://cmyeclhrvhn2o" path="res://FoliageShader.tres" id="3_35t4i"]
+[ext_resource type="ArrayMesh" uid="uid://c5m1mgx7e352n" path="res://assets/Meshes/Flora/Grass/Grass.res" id="4_k2ixc"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_mirih"]
 custom_solver_bias = 0.5
@@ -15,6 +17,36 @@ shader_parameter/shadow_thickness = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_djcko"]
 size = Vector2(6.5, 6.5)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_h1qo2"]
+fractal_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rtxb1"]
+noise = SubResource("FastNoiseLite_h1qo2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_otpeq"]
+shader = ExtResource("3_35t4i")
+shader_parameter/instance_rows = 100.0
+shader_parameter/instance_rot_randomize = 2.5
+shader_parameter/instance_spacing = 1.0
+shader_parameter/instance_scale_x = 1.0
+shader_parameter/instance_scale_y = 1.0
+shader_parameter/instance_scale_z = 1.0
+shader_parameter/instance_scale_randomize = 1.0
+shader_parameter/instance_pos_randomize = 2.0
+shader_parameter/instance_scale_min = 0.2
+shader_parameter/instance_scale_max = 1.2
+shader_parameter/_coverage_altitude = 10.0
+shader_parameter/_coverage_range = 100.0
+shader_parameter/_slope_coverage = 0.5
+shader_parameter/clumping_strength = 20.0
+shader_parameter/terrain_normal_basis = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
+shader_parameter/instance_orient_to_normal = true
+shader_parameter/instance_orientation_influence = 1.0
+shader_parameter/__terrain_amplitude = 12.0
+shader_parameter/map_heightmap_size = Vector2(512, 512)
+shader_parameter/map_normalmap_size = Vector2(512, 512)
+shader_parameter/map_clumpmap = SubResource("NoiseTexture2D_rtxb1")
 
 [node name="CameraArm" type="SpringArm3D"]
 shape = SubResource("ConcavePolygonShape3D_mirih")
@@ -34,3 +66,10 @@ visible = false
 material_override = SubResource("ShaderMaterial_7k4il")
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_djcko")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="Camera3D"]
+amount = 10000
+explosiveness = 1.0
+randomness = 1.0
+process_material = SubResource("ShaderMaterial_otpeq")
+draw_pass_1 = ExtResource("4_k2ixc")

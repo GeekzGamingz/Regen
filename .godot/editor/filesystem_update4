@@ -4,6 +4,7 @@ res://source/World/Sea.gdshader
 res://Grass.gdshader
 res://assets/Meshes/Flora/Grass/Grass.res
 res://source/User Interface/Outline.gdshader
+res://FoliageShader.tres
 res://source/Actor/Player/Player.tscn
 res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
