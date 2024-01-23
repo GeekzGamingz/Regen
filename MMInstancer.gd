@@ -39,7 +39,8 @@ var v_scale: float = 1
 @onready var colliders_to_spawn: Array
 @onready var last_pos: Vector3
 @onready var first_update= true
- 
+@onready var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
+
 func _ready():
 	create_multimesh()
 	
@@ -72,7 +73,10 @@ func create_multimesh():
  
 func _update():
 	#on each update, move the center to player
-	self.global_position = Vector3(player_node.global_position.x,0.0,player_node.global_position.z).snapped(Vector3(1,0,1));
+	if player_node != null:
+		#global_position = p.player.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
+		global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
+	#self.global_position = Vector3(player_node.global_position.x,0.0,player_node.global_position.z).snapped(Vector3(1,0,1))
 	multi_mesh_instance.multimesh = distribute_meshes()
 	timer.wait_time = update_frequency
 	timer.start()
@@ -112,7 +116,7 @@ func distribute_meshes():
 		var ori = Vector3(x, y, z)
 		var sc = Vector3(   instance_min_scale+scale_randomize * random(x,z) + instance_width,
 							instance_min_scale+scale_randomize * random(x,z) + instance_height,
-							instance_min_scale+scale_randomize * random(x,z)+ instance_width
+							instance_min_scale+scale_randomize * random(x,z) + instance_width
 							)
  
 		# Randomize rotations

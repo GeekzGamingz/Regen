@@ -43,12 +43,12 @@ shadow_enabled = true
 player = NodePath("../../Kinematics/Player")
 
 [node name="Instancer" type="Marker3D" parent="World_Chunk" node_paths=PackedStringArray("player_node")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
 top_level = true
 script = ExtResource("4_k1t20")
 player_node = NodePath("../../Kinematics/Player")
 instance_amount = 1000
-instance_spacing = 3
+pos_randomize = 2.0
+instance_spacing = 2
 terrain_height = 24.0
 heightmap = ExtResource("5_rp0r1")
 instance_mesh = ExtResource("5_kuthf")

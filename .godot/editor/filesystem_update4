@@ -4,6 +4,6 @@ res://source/World/ProcGen/Water/Water.gdshader
 res://source/User Interface/Outline.gdshader
 res://assets/Meshes/Flora/Grass/Grass.gdshader
 res://assets/Meshes/Flora/Grass/Grass.res
-res://MMInstancer.gd
 res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
+res://MMInstancer.gd
