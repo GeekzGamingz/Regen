@@ -5,7 +5,6 @@ extends Node3D
 @export var instance_amount : int = 100  # Number of instances to generate
 @export var generate_colliders: bool = false
 @export var collider_coverage_dist : float = 50
-@export var ground_chunk_mesh: NodePath
 @export var pos_randomize : float = 0  # Amount of randomization for x and z positions
 @export_range(0,50) var instance_min_scale: float = 1
 @export var instance_height: float = 1
@@ -21,8 +20,8 @@ extends Node3D
 @export var rot_z_randomize : float = 0.0  # Amount of randomization for Z rotation 
 @export var heightmap : Texture2D
 @onready var hmap_img
-@onready var width: int
-@onready var height: int
+@onready var width: int = 512
+@onready var height: int = 512
 @export var instance_mesh : Mesh   # Mesh resource for each instance
 @export var instance_collision : Shape3D
 @export var update_frequency: float = 0.01
@@ -45,12 +44,6 @@ func _ready():
 	create_multimesh()
 	
 func create_multimesh():
-	var proc_gen = get_node("../../..")
-	player_node = proc_gen.player
-	#grab horizontal scale on the terrain mesh so match the scale of the heightmap in case your terrain is resized
-	h_scale = get_node(ground_chunk_mesh).scale.x # could be x or z, doesn not matter as they should be the same
-	v_scale = get_node(ground_chunk_mesh).scale.y
-	
 	# Create a MultiMeshInstance3D and set its MultiMesh
 	multi_mesh_instance = MultiMeshInstance3D.new()
 	multi_mesh_instance.top_level = true
@@ -62,7 +55,7 @@ func create_multimesh():
 	offset = round(instance_amount/instance_rows) #rounded up/down to nearest integer
 	
 	#wait for map to load before continuing
-	await heightmap.changed
+	#await heightmap.changed
 	hmap_img = heightmap.get_image()
 	width = hmap_img.get_width()
 	height = hmap_img.get_height()
@@ -72,7 +65,7 @@ func create_multimesh():
 	
 	#Add timer for updates
 	timer = Timer.new()
-	$"..".add_child(timer)
+	add_child(timer)
 	timer.timeout.connect(_update)
 	timer.wait_time = update_frequency 
 	_update()
@@ -153,19 +146,20 @@ func distribute_meshes():
 	return multi_mesh
  
 func get_heightmap_y(x, z):
-	# Sample the heightmap texture to get the Y position based on X and Z coordinates
-	var pixel_x = (width / 2) + x / h_scale 
-	var pixel_z = (height / 2) + z / h_scale 
-	
-	if pixel_x > width: pixel_x -= width 
-	if pixel_z > height: pixel_z -= height 
-	if pixel_x < 0: pixel_x += width 
-	if pixel_z < 0: pixel_z += height 
+	return hmap_img.get_pixel(fposmod(x, width), fposmod(z, width)).r * terrain_height
+	## Sample the heightmap texture to get the Y position based on X and Z coordinates
+	#var pixel_x = (width / 2) + x / h_scale 
+	#var pixel_z = (height / 2) + z / h_scale 
+	#
+	#if pixel_x > width: pixel_x -= width 
+	#if pixel_z > height: pixel_z -= height 
+	#if pixel_x < 0: pixel_x += width 
+	#if pixel_z < 0: pixel_z += height 
+ #
+	#var color = hmap_img.get_pixel(pixel_x, pixel_z)
+	#return color.r * terrain_height# * v_scale
  
-	var color = hmap_img.get_pixel(pixel_x, pixel_z)
-	return color.r * terrain_height * v_scale
- 
-func random(x,z):
+func random(x,z): 
 	var r = fposmod(sin(Vector2(x,z).dot(Vector2(12.9898,78.233)) * 43758.5453123),1.0)
 	return r
 	

@@ -7,4 +7,3 @@ res://assets/Meshes/Flora/Grass/Grass.res
 res://MMInstancer.gd
 res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
-res://source/World/ProcGen/ClipMap/ClipmapPartition.gd

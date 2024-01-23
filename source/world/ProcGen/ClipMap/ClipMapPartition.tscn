@@ -18,7 +18,7 @@ shader_parameter/grass_texture = ExtResource("2_p5jig")
 shader_parameter/rock_texture = ExtResource("3_vbhqw")
 shader_parameter/sand_texture = ExtResource("4_874wk")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_l6gq4"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_8s70w"]
 size = Vector2(128, 128)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_qh08y"]
@@ -78,7 +78,7 @@ shader_parameter/texture_normal2 = SubResource("NoiseTexture2D_kywme")
 [node name="Partition_Clipmap" type="MeshInstance3D"]
 material_override = SubResource("ShaderMaterial_ixasp")
 extra_cull_margin = 512.0
-mesh = SubResource("PlaneMesh_l6gq4")
+mesh = SubResource("PlaneMesh_8s70w")
 script = ExtResource("2_i8w3a")
 
 [node name="SeaLevel" type="MeshInstance3D" parent="."]
