@@ -26,5 +26,5 @@ func generate_world():
 #Physics Process
 func _physics_process(_delta):
 	if p.player != null:
-		global_position = p.player.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
+		global_position = p.player.global_position.snapped(Vector3.ONE * length)
 		RenderingServer.global_shader_parameter_set("clipmap_position", global_position)

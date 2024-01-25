@@ -151,17 +151,6 @@ func distribute_meshes():
  
 func get_heightmap_y(x, z):
 	return hmap_img.get_pixel(fposmod(x, width), fposmod(z, width)).r * terrain_height
-	## Sample the heightmap texture to get the Y position based on X and Z coordinates
-	#var pixel_x = (width / 2) + x / h_scale 
-	#var pixel_z = (height / 2) + z / h_scale 
-	#
-	#if pixel_x > width: pixel_x -= width 
-	#if pixel_z > height: pixel_z -= height 
-	#if pixel_x < 0: pixel_x += width 
-	#if pixel_z < 0: pixel_z += height 
- #
-	#var color = hmap_img.get_pixel(pixel_x, pixel_z)
-	#return color.r * terrain_height# * v_scale
  
 func random(x,z): 
 	var r = fposmod(sin(Vector2(x,z).dot(Vector2(12.9898,78.233)) * 43758.5453123),1.0)

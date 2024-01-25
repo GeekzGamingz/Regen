@@ -47,9 +47,9 @@ top_level = true
 script = ExtResource("4_k1t20")
 player_node = NodePath("../../Kinematics/Player")
 instance_amount = 1000
-pos_randomize = 2.0
-instance_spacing = 2
-terrain_height = 24.0
+pos_randomize = 4.0
+instance_spacing = 1
+terrain_height = 12.0
 heightmap = ExtResource("5_rp0r1")
 instance_mesh = ExtResource("5_kuthf")
 update_frequency = 0.5
@@ -57,7 +57,7 @@ update_frequency = 0.5
 [node name="Kinematics" type="Node3D" parent="."]
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 6.17953, 3.66415)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 15.2834, 3.66415)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.2606, 6.83116, 17.3889)
