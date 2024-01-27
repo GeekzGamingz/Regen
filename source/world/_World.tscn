@@ -1,13 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dbkpaspk2squs"]
+[gd_scene load_steps=10 format=3 uid="uid://dbkpaspk2squs"]
 
 [ext_resource type="Script" path="res://source/World/_World.gd" id="1_jfcig"]
 [ext_resource type="PackedScene" uid="uid://b3x6ajm4gwyl6" path="res://source/World/ProcGen/ProcGen.tscn" id="1_yp283"]
 [ext_resource type="PackedScene" uid="uid://dj4mmjrlffg0a" path="res://source/Actor/Humanoid/Humanoid.tscn" id="3_5cedd"]
 [ext_resource type="PackedScene" uid="uid://c2dl6n7fjyny8" path="res://source/Actor/Player/Player.tscn" id="4_77dap"]
-[ext_resource type="Script" path="res://MMInstancer.gd" id="4_k1t20"]
-[ext_resource type="ArrayMesh" uid="uid://c5m1mgx7e352n" path="res://assets/Meshes/Flora/Grass/Grass.res" id="5_kuthf"]
+[ext_resource type="Script" path="res://MMGrid.gd" id="4_f08pj"]
 [ext_resource type="PackedScene" uid="uid://ddm2fw1pp3ebs" path="res://source/User Interface/Mode_Debug.tscn" id="5_lojl0"]
-[ext_resource type="Texture2D" uid="uid://dv7os7860pbi1" path="res://source/World/ProcGen/heightmap.png" id="5_rp0r1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tt3sx"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -42,22 +40,13 @@ shadow_enabled = true
 [node name="ProcGen" parent="World_Chunk" node_paths=PackedStringArray("player") instance=ExtResource("1_yp283")]
 player = NodePath("../../Kinematics/Player")
 
-[node name="Instancer" type="Marker3D" parent="World_Chunk" node_paths=PackedStringArray("player_node")]
-top_level = true
-script = ExtResource("4_k1t20")
+[node name="GridInstancer" type="Marker3D" parent="World_Chunk" node_paths=PackedStringArray("player_node")]
+script = ExtResource("4_f08pj")
 player_node = NodePath("../../Kinematics/Player")
-instance_amount = 1000
-pos_randomize = 4.0
-instance_spacing = 1
-terrain_height = 12.0
-heightmap = ExtResource("5_rp0r1")
-instance_mesh = ExtResource("5_kuthf")
-update_frequency = 0.5
 
 [node name="Kinematics" type="Node3D" parent="."]
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 15.2834, 3.66415)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.2606, 6.83116, 17.3889)

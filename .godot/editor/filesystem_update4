@@ -1,14 +1,10 @@
-res://source/World/_World.tscn
+res://source/World/ProcGen/instancer.tscn
+res://MMGrid.gd
+res://assets/Meshes/Flora/Grass/Grass.gdshader
+res://assets/Meshes/Flora/Grass/Grass.res
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
 res://source/World/ProcGen/Water/Water.gdshader
 res://source/User Interface/Outline.gdshader
-res://assets/Meshes/Flora/Grass/Grass.gdshader
-res://assets/Meshes/Flora/Grass/Grass.res
-res://MMInstancer.gd
+res://source/World/_World.tscn
 res://source/World/ProcGen/ProcGen.tscn
-res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
-res://_Globals.gd
-res://source/World/ProcGen/ClipMap/ClipmapPartition.gd
-res://source/World/ProcGen/Grass/Grass.tscn
-res://source/World/ProcGen/ClipMap/ClipmapScript.gd
-res://source/World/ProcGen/CollisionMap/CollisionMap.gd
+res://MMInstancer.gd

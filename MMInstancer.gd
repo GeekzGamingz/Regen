@@ -43,6 +43,7 @@ var v_scale: float = 1
 
 func _ready():
 	create_multimesh()
+	player_node = get_parent().player_node
 	
 func create_multimesh():
 	# Create a MultiMeshInstance3D and set its MultiMesh
@@ -51,7 +52,7 @@ func create_multimesh():
 	multi_mesh = MultiMesh.new()
 	multi_mesh.transform_format = MultiMesh.TRANSFORM_3D
 	multi_mesh.instance_count = instance_amount
-	multi_mesh.mesh = instance_mesh 
+	multi_mesh.mesh = instance_mesh
 	instance_rows = sqrt(instance_amount) #rounded down to integer
 	offset = round(instance_amount/instance_rows) #rounded up/down to nearest integer
 	

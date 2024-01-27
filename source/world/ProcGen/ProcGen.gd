@@ -3,7 +3,7 @@ extends StaticBody3D
 #------------------------------------------------------------------------------#
 #Variables
 #Preloaded Variables
-var COLLISION = preload("res://source/World/ProcGen/CollisionMap/CollisionMap.tscn")
+const COLLISION = preload("res://source/World/ProcGen/CollisionMap/CollisionMap.tscn")
 #Exported Variables
 @export var player = CharacterBody3D
 #OnReady Variables
