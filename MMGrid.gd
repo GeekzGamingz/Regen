@@ -1,12 +1,14 @@
 @tool
 extends Node3D
-const INSTANCER = preload("res://source/World/ProcGen/instancer.tscn")
+const INSTANCER = preload("res://source/World/ProcGen/Grass/Grass_Instance.tscn")
+var multi_mesh_instance
 @export var player_node: Node3D
 @onready var pos: Vector3 #this will the center point of the grid 
 @onready var grid_size #how many LoDs you want from the center
 @onready var chunksize #side size of the instance cluster patch/chunk
 @onready var grid_created = false #used to ensure the grid creator only runs once as opposed to on every update
- 
+@onready var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
+
 func _ready():
 	create_grid(pos, 2, 2)
 
@@ -37,8 +39,9 @@ func position_grid(grid_points,grid_size,chunksize):
 		i = Vector3(i.x - (grid_size/2 * chunksize), i.y, i.z + (grid_size/2 * chunksize))
 		#load chunks
 		#var multi_mesh_instance = MultiMeshInstance3D.new()
-		var multi_mesh_instance = INSTANCER.instantiate()
+		multi_mesh_instance = INSTANCER.instantiate()
 		add_child(multi_mesh_instance) #adding the mm instances as children of the Instancer node
+		#multi_mesh_instance.global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 		multi_mesh_instance.global_position = i
 		#set the parameters of this chunk
 		#it's best to save the instancer script with its export variables as a Resource first
@@ -52,5 +55,4 @@ func position_grid(grid_points,grid_size,chunksize):
 			#add_child(partition_clipmap)
  
 func _update():
-	#this is your update function
-	pass
+	multi_mesh_instance._update()

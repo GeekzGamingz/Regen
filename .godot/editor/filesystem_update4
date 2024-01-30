@@ -1,10 +1,8 @@
-res://source/World/ProcGen/instancer.tscn
+res://source/World/_World.tscn
 res://MMGrid.gd
 res://assets/Meshes/Flora/Grass/Grass.gdshader
 res://assets/Meshes/Flora/Grass/Grass.res
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
 res://source/World/ProcGen/Water/Water.gdshader
 res://source/User Interface/Outline.gdshader
-res://source/World/_World.tscn
-res://source/World/ProcGen/ProcGen.tscn
-res://MMInstancer.gd
+res://source/World/ProcGen/Grass/Grass_Instance.tscn

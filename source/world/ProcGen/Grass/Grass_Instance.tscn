@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cframb70um41r"]
+
+[ext_resource type="Script" path="res://MMInstancer.gd" id="1_58ktj"]
+[ext_resource type="Texture2D" uid="uid://dv7os7860pbi1" path="res://source/World/ProcGen/heightmap.png" id="2_o8tj0"]
+[ext_resource type="ArrayMesh" uid="uid://c5m1mgx7e352n" path="res://assets/Meshes/Flora/Grass/Grass.res" id="3_4ya80"]
+
+[node name="Grass_Instance" type="Marker3D"]
+top_level = true
+script = ExtResource("1_58ktj")
+pos_randomize = 10.0
+terrain_height = 12.0
+heightmap = ExtResource("2_o8tj0")
+instance_mesh = ExtResource("3_4ya80")
+update_frequency = 0.5

@@ -1,6 +1,7 @@
 @tool
-extends Node3D
- 
+extends Marker3D
+class_name Instancer
+
 @export var player_node: Node3D
 @export var instance_amount : int = 100  # Number of instances to generate
 @export var generate_colliders: bool = false
@@ -39,7 +40,7 @@ var v_scale: float = 1
 @onready var colliders_to_spawn: Array
 @onready var last_pos: Vector3
 @onready var first_update= true
-@onready var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
+
 
 func _ready():
 	create_multimesh()
@@ -49,6 +50,7 @@ func create_multimesh():
 	# Create a MultiMeshInstance3D and set its MultiMesh
 	multi_mesh_instance = MultiMeshInstance3D.new()
 	multi_mesh_instance.top_level = true
+	multi_mesh_instance.set_cast_shadows_setting(0) #Disables Shadows
 	multi_mesh = MultiMesh.new()
 	multi_mesh.transform_format = MultiMesh.TRANSFORM_3D
 	multi_mesh.instance_count = instance_amount
@@ -74,9 +76,9 @@ func create_multimesh():
  
 func _update():
 	#on each update, move the center to player
-	if player_node != null:
+	#if player_node != null:
 		#global_position = p.player.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
-		global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
+		#global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 	#self.global_position = Vector3(player_node.global_position.x,0.0,player_node.global_position.z).snapped(Vector3(1,0,1))
 	multi_mesh_instance.multimesh = distribute_meshes()
 	timer.wait_time = update_frequency
