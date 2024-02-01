@@ -80,6 +80,8 @@ func _update():
 		#global_position = p.player.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 		#global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 	#self.global_position = Vector3(player_node.global_position.x,0.0,player_node.global_position.z).snapped(Vector3(1,0,1))
+	
+	if player_node != null: get_parent()._update()
 	multi_mesh_instance.multimesh = distribute_meshes()
 	timer.wait_time = update_frequency
 	timer.start()

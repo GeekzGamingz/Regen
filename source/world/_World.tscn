@@ -47,7 +47,7 @@ player_node = NodePath("../../Kinematics/Player")
 [node name="Kinematics" type="Node3D" parent="."]
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.18377, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35.2606, 6.83116, 17.3889)
