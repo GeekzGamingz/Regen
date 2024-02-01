@@ -11,4 +11,4 @@ instance_spacing = 1
 terrain_height = 12.0
 heightmap = ExtResource("2_o8tj0")
 instance_mesh = ExtResource("3_4ya80")
-update_frequency = 0.5
+update_frequency = 1.0

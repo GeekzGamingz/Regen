@@ -2,7 +2,8 @@
 extends Node3D
 const INSTANCER = preload("res://source/World/ProcGen/Grass/Grass_Instance.tscn")
 var multi_mesh_instance
-
+var dict = {}
+var last_position
 @export var player_node: Node3D
 
 @onready var pos: Vector3 #this will the center point of the grid 
@@ -10,6 +11,8 @@ var multi_mesh_instance
 @onready var chunksize #side size of the instance cluster patch/chunk
 @onready var grid_created = false #used to ensure the grid creator only runs once as opposed to on every update
 @onready var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
+@onready var grid_instancer = $"."
+
 
 func _ready():
 	create_grid(pos, 3, 15)
@@ -38,7 +41,6 @@ func create_grid(pos, grid_size:int, chunksize: int):
 		
 func position_grid(grid_points,grid_size,chunksize):    
 	var ticks = 0
-	var dict = {} #what the fuck am i doing, update: works?
 
 	for i in grid_points:
 		i = Vector3(i.x - (grid_size/2 * chunksize), i.y, i.z + (grid_size/2 * chunksize))
@@ -49,23 +51,22 @@ func position_grid(grid_points,grid_size,chunksize):
 		dict[str("instance" + str(ticks))] = multi_mesh_instance
 		
 		add_child(dict[str("instance" + str(ticks))]) #adding the mm instances as children of the Instancer node
-		#multi_mesh_instance.global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 		multi_mesh_instance.global_position = i
-		
-		
-	print(dict)
+
 		#set the parameters of this chunk
 		#it's best to save the instancer script with its export variables as a Resource first
 		#and then load it here and pass in the desired parameters
-		 #in range (-distance, distance + 1):
-			#var partition_clipmap = PARTITION_CLIPMAP.instantiate()
-			##Assign Partition Coordinates
-			#partition_clipmap.x = x
-			#partition_clipmap.z = z
-			##Add to Tree
-			#add_child(partition_clipmap)
+
  
 func _update():
 	if player_node != null:
 		global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
+		if global_position != last_position:
+			for instancer in get_children():
+				instancer.global_position.x = global_position.x - instancer.global_position.x
+				instancer.global_position.z = global_position.z - instancer.global_position.z
+		last_position = global_position
+				
+		#for instance in dict:
+			#dict[instance].global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 		#print("Updated.")
