@@ -1,3 +1,4 @@
+@tool
 #Inherits MeshInstance3D Code
 extends MeshInstance3D
 #------------------------------------------------------------------------------#

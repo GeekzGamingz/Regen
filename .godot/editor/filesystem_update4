@@ -1,15 +1,10 @@
 res://source/World/_World.tscn
+res://MMGrid.gd
+res://assets/Meshes/Flora/Grass/Grass.gdshader
+res://assets/Meshes/Flora/Grass/Grass.res
 res://source/World/ProcGen/ClipMap/Clipmap.gdshader
-res://source/World/Sea.gdshader
+res://source/World/ProcGen/Water/Water.gdshader
 res://source/User Interface/Outline.gdshader
-res://source/Actor/Player/Player.tscn
+res://source/World/ProcGen/Grass/Grass_Instance.tscn
 res://source/World/ProcGen/ProcGen.tscn
 res://source/World/ProcGen/ClipMap/ClipMapPartition.tscn
-res://source/World/ProcGen/ClipMap/ClipMap.tscn
-res://source/User Interface/camera_arm.tscn
-res://source/World/ProcGen/CollisionMap/CollisionMap.gd
-res://source/World/ProcGen/CollisionMap/CollisionMap.tscn
-res://source/Actor/Humanoid/Humanoid.tscn
-res://source/World/ProcGen/ProcGen.gd
-res://_Globals.gd
-res://source/Actor/Humanoid/_02HumanoidMovement.gd

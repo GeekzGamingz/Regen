@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbkpaspk2squs"]
+[gd_scene load_steps=10 format=3 uid="uid://dbkpaspk2squs"]
 
 [ext_resource type="Script" path="res://source/World/_World.gd" id="1_jfcig"]
 [ext_resource type="PackedScene" uid="uid://b3x6ajm4gwyl6" path="res://source/World/ProcGen/ProcGen.tscn" id="1_yp283"]
 [ext_resource type="PackedScene" uid="uid://dj4mmjrlffg0a" path="res://source/Actor/Humanoid/Humanoid.tscn" id="3_5cedd"]
 [ext_resource type="PackedScene" uid="uid://c2dl6n7fjyny8" path="res://source/Actor/Player/Player.tscn" id="4_77dap"]
+[ext_resource type="Script" path="res://MMGrid.gd" id="4_f08pj"]
 [ext_resource type="PackedScene" uid="uid://ddm2fw1pp3ebs" path="res://source/User Interface/Mode_Debug.tscn" id="5_lojl0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tt3sx"]
@@ -23,6 +24,10 @@ fog_light_color = Color(0.74902, 0.478431, 0.270588, 1)
 [node name="WorldRoot" type="Node3D"]
 script = ExtResource("1_jfcig")
 
+[node name="UIRoot" type="CanvasLayer" parent="."]
+
+[node name="Mode_Debug" parent="UIRoot" instance=ExtResource("5_lojl0")]
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_viht0")
 
@@ -32,22 +37,20 @@ shadow_enabled = true
 
 [node name="World_Chunk" type="Node3D" parent="."]
 
-[node name="ProcGen" parent="World_Chunk" instance=ExtResource("1_yp283")]
+[node name="ProcGen" parent="World_Chunk" node_paths=PackedStringArray("player") instance=ExtResource("1_yp283")]
+player = NodePath("../../Kinematics/Player")
+
+[node name="GridInstancer" type="Marker3D" parent="World_Chunk" node_paths=PackedStringArray("player_node")]
+top_level = true
+script = ExtResource("4_f08pj")
+player_node = NodePath("../../Kinematics/Player")
+grid = 3
+chunk = 11
 
 [node name="Kinematics" type="Node3D" parent="."]
 
 [node name="Player" parent="Kinematics" instance=ExtResource("4_77dap")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 15, 5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0491, 47.2396, 17.3889)
-
-[node name="Humanoid2" parent="Kinematics" instance=ExtResource("3_5cedd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.3387, 47.2396, -23.2955)
-
-[node name="Humanoid3" parent="Kinematics" instance=ExtResource("3_5cedd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.3382, 47.2396, -3.93246)
-
-[node name="UIRoot" type="CanvasLayer" parent="."]
-
-[node name="Mode_Debug" parent="UIRoot" instance=ExtResource("5_lojl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 20)

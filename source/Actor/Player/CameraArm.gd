@@ -9,10 +9,12 @@ extends SpringArm3D
 #OnReady Variables
 @onready var camera = $Camera3D
 #------------------------------------------------------------------------------#
+#Ready
 func _ready():
 	set_as_top_level(true)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 #------------------------------------------------------------------------------#
+#Camera Input
 func _input(_event):
 	if Input.is_action_just_pressed("action_camera"):
 		match(PointOfView):

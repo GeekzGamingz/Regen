@@ -30,6 +30,7 @@ doppler_tracking = 2
 
 [node name="OutlineMesh" type="MeshInstance3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.1)
+visible = false
 material_override = SubResource("ShaderMaterial_7k4il")
 extra_cull_margin = 16384.0
 mesh = SubResource("QuadMesh_djcko")

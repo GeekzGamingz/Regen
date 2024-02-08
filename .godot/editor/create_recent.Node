@@ -1,6 +1,9 @@
-StaticBody3D
-MeshInstance3D
+Marker3D
+MultiMeshInstance3D
+GPUParticles3D
 Node3D
+MeshInstance3D
+StaticBody3D
 CollisionShape3D
 Label
 CanvasLayer
@@ -9,6 +12,3 @@ GridContainer
 VBoxContainer
 Control
 SubViewport
-Area3D
-Label3D
-CollisionPolygon3D
