@@ -3,19 +3,20 @@ extends Node3D
 const INSTANCER = preload("res://source/World/ProcGen/Grass/Grass_Instance.tscn")
 var multi_mesh_instance
 var dict = {}
-var last_position
+var last_position = Vector3.ZERO
 @export var player_node: Node3D
+@export var grid = 0
+@export var chunk = 0
 
 @onready var pos: Vector3 #this will the center point of the grid 
 @onready var grid_size #how many LoDs you want from the center
 @onready var chunksize #side size of the instance cluster patch/chunk
 @onready var grid_created = false #used to ensure the grid creator only runs once as opposed to on every update
 @onready var length = ProjectSettings.get_setting("shader_globals/clipmap_partition_length").value
-@onready var grid_instancer = $"."
 
 
 func _ready():
-	create_grid(pos, 3, 15)
+	create_grid(pos, grid, chunk)
 
 func create_grid(pos, grid_size:int, chunksize: int):
 	print("Creating Grid...")
@@ -63,8 +64,7 @@ func _update():
 		global_position = player_node.global_position.snapped(Vector3.ONE * length) * Vector3(1, 0, 1)
 		if global_position != last_position:
 			for instancer in get_children():
-				instancer.global_position.x = global_position.x - instancer.global_position.x
-				instancer.global_position.z = global_position.z - instancer.global_position.z
+				instancer.global_position -= last_position - global_position
 		last_position = global_position
 				
 		#for instance in dict:

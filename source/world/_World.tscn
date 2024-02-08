@@ -41,8 +41,11 @@ shadow_enabled = true
 player = NodePath("../../Kinematics/Player")
 
 [node name="GridInstancer" type="Marker3D" parent="World_Chunk" node_paths=PackedStringArray("player_node")]
+top_level = true
 script = ExtResource("4_f08pj")
 player_node = NodePath("../../Kinematics/Player")
+grid = 3
+chunk = 11
 
 [node name="Kinematics" type="Node3D" parent="."]
 
@@ -50,4 +53,4 @@ player_node = NodePath("../../Kinematics/Player")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 
 [node name="Humanoid" parent="Kinematics" instance=ExtResource("3_5cedd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 10, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 20)
